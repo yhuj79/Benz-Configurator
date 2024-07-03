@@ -11,6 +11,9 @@ module.exports = {
         ".text-shadow": {
           textShadow: "2px 2px 3px rgba(0, 0, 0)",
         },
+        ".text-shadow-sm": {
+          textShadow: "1px 1px 1px rgba(0, 0, 0)",
+        },
         ".text-shadow-md": {
           textShadow: "3px 3px 5px rgba(0, 0, 0)",
         },

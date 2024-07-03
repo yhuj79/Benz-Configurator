@@ -1,20 +1,20 @@
 import Model from "./Model";
 
-import AMGImage from "../assets/Model_Amg.png";
-import SClassImage from "../assets/Model_Sclass.png";
-import CLAClassImage from "../assets/Model_Cla.png";
-import CClassImage from "../assets/Model_Cclass.png";
+import imageAmg from "../assets/main_model_amg.png";
+import imgS from "../assets/main_model_s.png";
+import imageCla from "../assets/main_model_cla.png";
+import imageC from "../assets/main_model_c.png";
 
 function ModelList() {
   return (
-    <div className="w-4/5 mx-auto pb-24">
+    <div className="w-5/6 mx-auto py-20">
       <div className="flex relative">
-        <Model image={AMGImage} name="AMG" />
-        <Model image={SClassImage} name="S-Class" />
+        <Model image={imageAmg} name="AMG" />
+        <Model image={imgS} name="S-Class" />
       </div>
       <div className="flex relative">
-        <Model image={CLAClassImage} name="CLA-Class" />
-        <Model image={CClassImage} name="C-Class" />
+        <Model image={imageCla} name="CLA-Class" />
+        <Model image={imageC} name="C-Class" />
       </div>
     </div>
   );
