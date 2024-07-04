@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Bars3Icon,
@@ -7,14 +8,26 @@ import {
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 
-import Logo from "../assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 
 function Header() {
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
   const iconClasses = "h-8 w-8 text-slate-200";
 
+  // 브라우저 크기 조절 시 애니메이션의 재실행을 방지
+  useEffect(() => {
+    setTimeout(() => {
+      setIsInitialLoad(false);
+    }, 2000);
+  }, []);
+
   return (
-    <header className="flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
-      <div className="hidden md:flex space-x-12">
+    <header className="z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
+      <div
+        className={`z-20 ${
+          isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
+        } hidden md:flex space-x-12`}
+      >
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -26,13 +39,21 @@ function Header() {
           <PhotoIcon className={iconClasses} />
         </Link>
       </div>
-      <div className="absolute left-1/2 transform -translate-x-1/2">
+      <div
+        className={`absolute inset-0 flex justify-center items-center ${
+          isInitialLoad ? "animate-appearZoom" : ""
+        }`}
+      >
         <Link to="/" className="flex flex-col items-center no-underline">
           <img className="w-12 filter brightness-150" alt="Logo" src={Logo} />
           <p className="hidden md:flex mt-1">Mercedes-Benz</p>
         </Link>
       </div>
-      <div className="hidden md:flex space-x-12">
+      <div
+        className={`z-20 ${
+          isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
+        } hidden md:flex space-x-12`}
+      >
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -48,7 +69,11 @@ function Header() {
           <GlobeAltIcon className={iconClasses} />
         </a>
       </div>
-      <div className="md:hidden flex items-center">
+      <div
+        className={`z-20 ${
+          isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
+        } md:hidden flex items-center`}
+      >
         <Bars3Icon className={iconClasses} />
       </div>
     </header>

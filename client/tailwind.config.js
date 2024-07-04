@@ -3,7 +3,27 @@ const plugin = require("tailwindcss/plugin");
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        appearZoom: {
+          "0%": { opacity: 0, transform: "scale(0.9)" },
+          "100%": { opacity: 1, transform: "scale(1)" },
+        },
+        appearDown: {
+          "0%": { opacity: 0, transform: "translateY(-30%)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        appearNormal: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
+      animation: {
+        appearZoom: "appearZoom 1s ease-in-out",
+        appearDown: "appearDown 0.7s ease-in-out forwards",
+        appearNormal: "appearNormal 1s ease-in-out forwards",
+      },
+    },
   },
   plugins: [
     plugin(function ({ addUtilities }) {
@@ -28,6 +48,23 @@ module.exports = {
         },
       };
       addUtilities(newUtilities, ["responsive", "hover"]);
+    }),
+    plugin(function ({ addUtilities }) {
+      const delayUtilities = {
+        ".delay-0\\.6s": {
+          animationDelay: "0.6s",
+        },
+        ".delay-0\\.9s": {
+          animationDelay: "0.9s",
+        },
+        ".delay-1\\.2s": {
+          animationDelay: "1.2s",
+        },
+        ".delay-1\\.5s": {
+          animationDelay: "1.5s",
+        },
+      };
+      addUtilities(delayUtilities, ["responsive", "hover"]);
     }),
   ],
 };

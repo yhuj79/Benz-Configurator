@@ -1,9 +1,9 @@
 import Model from "./Model";
 
-import imageAmg from "../assets/main_model_amg.png";
-import imgS from "../assets/main_model_s.png";
-import imageCla from "../assets/main_model_cla.png";
-import imageC from "../assets/main_model_c.png";
+import imageAmg from "../../assets/main_model_amg.png";
+import imgS from "../../assets/main_model_s.png";
+import imageCla from "../../assets/main_model_cla.png";
+import imageC from "../../assets/main_model_c.png";
 
 function ModelList() {
   return (

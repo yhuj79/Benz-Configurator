@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
-import Banner from "../components/Banner";
-import ModelList from "../components/ModelList";
+import Banner from "../components/main/Banner";
+import ModelList from "../components/main/ModelList";
 
 function Main() {
   const modelListRef = useRef(null);
