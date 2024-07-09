@@ -1,6 +1,8 @@
-function Model({ image, name }) {
+import { Link } from "react-router-dom";
+
+function Model({ image, name, link }) {
   return (
-    <div className="relative w-1/2 m-2 overflow-hidden group">
+    <Link to={link} className="relative w-1/2 m-2 overflow-hidden group">
       <img
         className="w-full opacity-70 transform transition duration-300 ease-in-out group-hover:scale-110 group-hover:opacity-100"
         alt=""
@@ -11,7 +13,7 @@ function Model({ image, name }) {
           {name}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
 
