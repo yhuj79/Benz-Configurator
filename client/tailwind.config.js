@@ -4,6 +4,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        "black-gray": "#181818",
+        "dark-gray": "#2F2F2F",
+        "md-gray": "#444444",
+        "head-line": "#F8F8F7",
+        "desc": "#D9D9D9",
+      },
       keyframes: {
         appearZoom: {
           "0%": { opacity: 0, transform: "scale(0.9)" },
@@ -26,6 +33,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("tailwind-scrollbar-hide"),
     plugin(function ({ addUtilities }) {
       const newUtilities = {
         ".text-shadow": {

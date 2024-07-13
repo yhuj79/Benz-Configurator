@@ -1,4 +1,4 @@
-import imageMainGif from "../../assets/main_gif.gif";
+import imageMainGif from "../../assets/main/intro.gif";
 
 function Banner({ scrollToModelList }) {
   return (

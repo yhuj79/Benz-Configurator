@@ -8,7 +8,7 @@ import {
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
 
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/main/logo.png";
 
 function Header() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -22,7 +22,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
+    <header className="h-[13vh] z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
       <div
         className={`z-20 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""

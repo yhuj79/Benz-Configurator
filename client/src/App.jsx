@@ -4,7 +4,7 @@ import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 
 import Main from "./pages/Main";
-import ModelAmg from "./pages/ModelAmg";
+import Configuration from "./pages/Configuration";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/amg" element={<ModelAmg />} />
+        <Route path="/configuration/:name" element={<Configuration />} />
       </Routes>
       <Footer />
     </Router>

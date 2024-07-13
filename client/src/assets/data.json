@@ -1,0 +1,15 @@
+{
+  "amg": {
+    "styling": ["nsp", "sp"],
+    "paint": ["black", "polawhite"],
+    "wheels": ["20alloy", "20multialloy"],
+    "seats": ["NapaBlack", "NapaBrown", "NapaRed"],
+    "trim": ["BlackPiano", "Carbon"],
+    "steering": ["Napa", "Dinamica"]
+  },
+  "otherVehicle": {
+    "styling": ["style1", "style2"],
+    "paint": ["red", "blue"],
+    "wheels": ["18alloy", "19alloy"]
+  }
+}

@@ -23,12 +23,12 @@ code {
 }
 
 * ::-webkit-scrollbar { /* 스크롤바 너비 */
-	width: 10px; 
+	width: 12px; 
 }
 * ::-webkit-scrollbar-thumb { /* 스크롤바 */
-  background-color: rgba(94, 94, 94, 0.5);
+  background-color: #6B6B6B;
   border-radius: 10px;
 }
 * ::-webkit-scrollbar-track { /* 스크롤바 트랙 */
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #2C2C2C;
 }
