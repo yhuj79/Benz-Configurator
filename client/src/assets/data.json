@@ -1,7 +1,7 @@
 {
   "amg": {
-    "styling": ["nsp", "sp"],
-    "paint": ["black", "polawhite"],
+    "styling": ["Default", "V8"],
+    "paint": ["Black", "PolaWhite"],
     "wheels": ["20alloy", "20multialloy"],
     "seats": ["NapaBlack", "NapaBrown", "NapaRed"],
     "trim": ["BlackPiano", "Carbon"],
