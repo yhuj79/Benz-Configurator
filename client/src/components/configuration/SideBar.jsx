@@ -71,7 +71,7 @@ function SideBar({ options, setViewMode }) {
   };
 
   return (
-    <div className="sidebar flex-2 min-w-[420px] max-w-full bg-dark-gray overflow-y-auto scrollbar-hide">
+    <div className="flex-2 min-w-[420px] max-w-full bg-dark-gray overflow-y-auto scrollbar-hide">
       {optionConfigs.map((option) => (
         <OptionSelector
           key={option.name}

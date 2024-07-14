@@ -63,17 +63,18 @@ function Viewer({ viewMode }) {
   };
 
   let imageUrl;
-  if (viewMode === "basic") {
-    imageUrl = `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-${styling}-${paint}-${wheels}-${degree}.webp`;
-  } else if (viewMode === "seats") {
-    imageUrl = `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-${seats}-${trim}-${steering}.webp`;
-  } else if (viewMode === "trimSteering") {
-    imageUrl = `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-two-${seats}-${trim}-${steering}.webp`;
+  if (viewMode === "exterior") {
+    imageUrl = `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-ex-${styling}-${paint}-${wheels}-${degree}.webp`;
+  } else if (viewMode === "interior-seats") {
+    imageUrl = `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-in-s-${seats}-${trim}-${steering}.webp`;
+  } else if (viewMode === "interior-front") {
+    imageUrl = `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-in-f-${seats}-${trim}-${steering}.webp`;
   }
 
   return (
     <div className="relative flex-8 w-full h-full bg-gray-200 overflow-hidden flex items-center justify-center">
-      {viewMode === "basic" ? (
+      {viewMode === "exterior" ? (
+        // exterior
         <>
           <img
             alt="background"
@@ -82,13 +83,13 @@ function Viewer({ viewMode }) {
           />
           <div className="relative flex items-center justify-center z-20">
             <img
-              alt="car-body"
+              alt="exterior"
+              src={imageUrl}
               ref={imgRef}
               onMouseDown={onDragStart}
               onMouseMove={onDragMove}
               onMouseUp={onDragEnd}
               onMouseLeave={onDragEnd}
-              src={imageUrl}
               className="relative z-11 2xl:pl-13 xl:pl-11 lg:pl-9 md:pl-7 sm:pl-5 pl-3"
             />
             <img
@@ -99,8 +100,9 @@ function Viewer({ viewMode }) {
           </div>
         </>
       ) : (
+        // interior
         <img
-          alt="car-custom"
+          alt="interior"
           src={imageUrl}
           className="relative w-full h-full z-10 object-cover"
         />

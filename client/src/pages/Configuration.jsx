@@ -8,8 +8,11 @@ function Configuration() {
   const { name } = useParams();
   const options = data[name];
 
-  // 'basic', 'seats', 'trimSteering' 세 가지 뷰어
-  const [viewMode, setViewMode] = useState("basic");
+  // 세 종류 뷰어 전환
+  // exterior ( Styling Package, Paint, Wheels )
+  // interior-seats ( Seats )
+  // interior-front ( Trim, Steering )
+  const [viewMode, setViewMode] = useState("exterior");
 
   return (
     <div className="h-[87vh]">

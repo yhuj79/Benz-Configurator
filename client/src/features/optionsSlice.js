@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export const optionsSlice = createSlice({
   name: "options",
   initialState: {
-    styling: "nsp",
-    paint: "black",
+    styling: "Default",
+    paint: "Black",
     wheels: "20alloy",
     seats: "NapaBlack",
     trim: "BlackPiano",
