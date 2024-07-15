@@ -1,29 +1,32 @@
-import { useParams } from "react-router-dom";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
+
+import AnimatedPage from "../components/common/AnimatedPage";
+
 import Viewer from "../components/configuration/Viewer";
 import SideBar from "../components/configuration/SideBar";
+
 import data from "../assets/data.json";
 
 function Configuration() {
   const { name } = useParams();
   const options = data[name];
 
-  // 세 종류 뷰어 전환
+  // SideBar 선택에 따른 세 종류 Viewer 전환
   // exterior ( Styling Package, Paint, Wheels )
   // interior-seats ( Seats )
   // interior-front ( Trim, Steering )
   const [viewMode, setViewMode] = useState("exterior");
 
   return (
-    <div className="h-[87vh]">
-      <div className="h-[90%] flex">
-        <Viewer viewMode={viewMode} />
-        <SideBar options={options} setViewMode={setViewMode} />
+    <AnimatedPage>
+      <div className="h-full lg:h-[90vh]">
+        <div className="h-full lg:flex">
+          <Viewer viewMode={viewMode} />
+          <SideBar options={options} setViewMode={setViewMode} />
+        </div>
       </div>
-      <div className="h-[10%] bg-black-gray">
-        <h1>{name}</h1>
-      </div>
-    </div>
+    </AnimatedPage>
   );
 }
 

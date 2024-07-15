@@ -24,11 +24,16 @@ module.exports = {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
         },
+        appearLeft: {
+          "0%": { opacity: 0, transform: "translateX(15%)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
       },
       animation: {
         appearZoom: "appearZoom 1s ease-in-out",
         appearDown: "appearDown 0.7s ease-in-out forwards",
         appearNormal: "appearNormal 1s ease-in-out forwards",
+        appearLeft: "appearLeft 0.3s ease-in-out forwards",
       },
     },
   },

@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+import Logo from "../../assets/main/logo.png";
 import {
   Bars3Icon,
   MapIcon,
@@ -7,8 +9,6 @@ import {
   PlayIcon,
   GlobeAltIcon,
 } from "@heroicons/react/24/outline";
-
-import Logo from "../../assets/main/logo.png";
 
 function Header() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -22,7 +22,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="h-[13vh] z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
+    <header className="h-[10vh] z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
       <div
         className={`z-20 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
@@ -46,7 +46,6 @@ function Header() {
       >
         <Link to="/" className="flex flex-col items-center no-underline">
           <img className="w-12 filter brightness-150" alt="Logo" src={Logo} />
-          <p className="hidden md:flex mt-1">Mercedes-Benz</p>
         </Link>
       </div>
       <div

@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
+
+import OptionSelector from "./OptionSelector";
+
 import {
   setStyling,
   setPaint,
@@ -8,11 +11,11 @@ import {
   setTrim,
   setSteering,
 } from "../../features/optionsSlice";
-import OptionSelector from "./OptionSelector";
 
 function SideBar({ options, setViewMode }) {
   const dispatch = useDispatch();
   const [openOption, setOpenOption] = useState(null);
+  const sideBarRef = useRef(null);
 
   const optionConfigs = [
     {
@@ -21,7 +24,7 @@ function SideBar({ options, setViewMode }) {
       desc: "Add exterior styling package",
       action: setStyling,
       choices: options.styling,
-      onClick: () => setViewMode("basic"),
+      onClick: () => setViewMode("exterior"),
     },
     {
       name: "Paint",
@@ -29,7 +32,7 @@ function SideBar({ options, setViewMode }) {
       desc: "Choose the exterior color",
       action: setPaint,
       choices: options.paint,
-      onClick: () => setViewMode("basic"),
+      onClick: () => setViewMode("exterior"),
     },
     {
       name: "Wheels",
@@ -37,7 +40,7 @@ function SideBar({ options, setViewMode }) {
       desc: "Configure rims and calipers",
       action: setWheels,
       choices: options.wheels,
-      onClick: () => setViewMode("basic"),
+      onClick: () => setViewMode("exterior"),
     },
     {
       name: "Seats",
@@ -45,7 +48,7 @@ function SideBar({ options, setViewMode }) {
       desc: "Select seat type and color",
       action: setSeats,
       choices: options.seats,
-      onClick: () => setViewMode("seats"),
+      onClick: () => setViewMode("interior-seats"),
     },
     {
       name: "Trim",
@@ -53,7 +56,7 @@ function SideBar({ options, setViewMode }) {
       desc: "Details which make the difference",
       action: setTrim,
       choices: options.trim,
-      onClick: () => setViewMode("trimSteering"),
+      onClick: () => setViewMode("interior-front"),
     },
     {
       name: "Steering Wheel",
@@ -61,7 +64,7 @@ function SideBar({ options, setViewMode }) {
       desc: "Select the steering wheel",
       action: setSteering,
       choices: options.steering,
-      onClick: () => setViewMode("trimSteering"),
+      onClick: () => setViewMode("interior-front"),
     },
   ];
 
@@ -71,7 +74,10 @@ function SideBar({ options, setViewMode }) {
   };
 
   return (
-    <div className="flex-2 min-w-[420px] max-w-full bg-dark-gray overflow-y-auto scrollbar-hide">
+    <div
+      ref={sideBarRef}
+      className="flex-2 lg:min-w-[420px] min-w-full max-w-full h-full pb-4 bg-dark-gray overflow-y-auto scrollbar-hide"
+    >
       {optionConfigs.map((option) => (
         <OptionSelector
           key={option.name}
@@ -86,6 +92,7 @@ function SideBar({ options, setViewMode }) {
           choices={option.choices}
           action={option.action}
           dispatch={dispatch}
+          sideBarRef={sideBarRef}
         />
       ))}
     </div>

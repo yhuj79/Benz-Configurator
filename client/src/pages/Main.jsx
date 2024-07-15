@@ -1,5 +1,7 @@
 import { useRef } from "react";
 
+import AnimatedPage from "../components/common/AnimatedPage";
+
 import Banner from "../components/main/Banner";
 import ModelList from "../components/main/ModelList";
 
@@ -14,12 +16,12 @@ function Main() {
   };
 
   return (
-    <div>
+    <AnimatedPage>
       <Banner scrollToModelList={scrollToModelList} />
       <div ref={modelListRef}>
         <ModelList />
       </div>
-    </div>
+    </AnimatedPage>
   );
 }
 

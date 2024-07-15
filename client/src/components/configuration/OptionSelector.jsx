@@ -1,4 +1,4 @@
-import React from "react";
+import { useSelector } from "react-redux";
 
 function OptionSelector({
   name,
@@ -9,11 +9,15 @@ function OptionSelector({
   choices,
   action,
   dispatch,
+  sideBarRef,
 }) {
+  // Access the current selection from the Redux store
+  const selectedOption = useSelector((state) => state.options[icon]);
+
   return (
     <div>
       <div
-        className={`flex bg-black-gray hover:bg-dark-gray transform transition duration-300 mx-5 mt-4 p-3 rounded-lg border border-md-gray cursor-pointer ${
+        className={`flex bg-black-gray hover:bg-dark-gray transform transition duration-300 mx-5 mt-4 p-3 rounded-lg border-2 border-md-gray cursor-pointer ${
           isOpen ? "bg-dark-gray scale-110 border-none" : ""
         }`}
         onClick={onClick}
@@ -27,27 +31,32 @@ function OptionSelector({
           <h1 className="text-lg font-bold text-head-line">{name}</h1>
           <p className="text-sm text-desc">{desc}</p>
           {isOpen && (
-            <p className="text-sm text-desc">
-              selected : <span className="text-head-line">???</span>
+            <p className="mt-2 text-sm text-desc">
+              selected :{" "}
+              <span className="text-head-line font-bold">{selectedOption}</span>
             </p>
           )}
         </div>
       </div>
       {isOpen && (
-        <div className="mx-5 bg-dark-gray">
+        <div className="mx-5 mt-2 mb-8 bg-dark-gray animate-appearLeft">
           <div className="flex">
             {choices.map((choice) => (
               <div
                 key={choice}
-                className="text-center w-24 m-1 p-2 border-2 border-black-gray bg-black-gray rounded-lg"
+                className={`text-center w-[120px] h-[120px] transform transition duration-300 border-2 m-1 ${
+                  selectedOption === choice
+                    ? "border-head-line"
+                    : "border-md-gray"
+                } bg-black-gray rounded-lg`}
                 onClick={() => dispatch(action(choice))}
               >
                 <img
                   alt={choice}
                   src={require(`../../assets/option/${choice}.png`)}
-                  className="w-20 h-16"
+                  className="w-[120px] h-[96px] rounded-t-md"
                 />
-                <p className="text-white">{choice}</p>
+                <p className="h-[24px] leading-5 text-desc text-xs">{choice}</p>
               </div>
             ))}
           </div>
