@@ -7,9 +7,63 @@
     "trim": ["BlackPiano", "Carbon"],
     "steering": ["Napa", "Dinamica"]
   },
-  "otherVehicle": {
-    "styling": ["style1", "style2"],
-    "paint": ["red", "blue"],
-    "wheels": ["18alloy", "19alloy"]
-  }
+  "sclass": {
+    "styling": ["Default", "V6", "V8"],
+    "paint": ["Sliver", "Black", "Chrome"],
+    "wheels": ["18alloy", "20alloy"],
+    "seats": ["Brown", "NapaBrown"],
+    "trim": ["Wood", "CarbonWhite"],
+    "steering": ["Classic", "Sports"]
+  },
+
+  "configs": [
+    {
+      "name": "Styling Package",
+      "icon": "styling",
+      "desc": "Add exterior styling package",
+      "action": "setStyling",
+      "choices": "styling",
+      "viewMode": "exterior"
+    },
+    {
+      "name": "Paint",
+      "icon": "paint",
+      "desc": "Choose the exterior color",
+      "action": "setPaint",
+      "choices": "paint",
+      "viewMode": "exterior"
+    },
+    {
+      "name": "Wheels",
+      "icon": "wheels",
+      "desc": "Configure rims and calipers",
+      "action": "setWheels",
+      "choices": "wheels",
+      "viewMode": "exterior"
+    },
+    {
+      "name": "Seats",
+      "icon": "seats",
+      "desc": "Select seat type and color",
+      "action": "setSeats",
+      "choices": "seats",
+      "viewMode": "interior-seats"
+    },
+    {
+      "name": "Trim",
+      "icon": "trim",
+      "desc": "Details which make the difference",
+      "action": "setTrim",
+      "choices": "trim",
+      "viewMode": "interior-front"
+    },
+    {
+      "name": "Steering Wheel",
+      "icon": "steering",
+      "desc": "Select the steering wheel",
+      "action": "setSteering",
+      "choices": "steering",
+      "viewMode": "interior-front"
+    }
+  ]
 }

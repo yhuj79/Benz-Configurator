@@ -1,29 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 import AnimatedPage from "../components/common/AnimatedPage";
-
 import Viewer from "../components/configuration/Viewer";
 import SideBar from "../components/configuration/SideBar";
 
 import data from "../assets/data.json";
+import { setInitialOptions } from "../features/optionsSlice";
 
 function Configuration() {
+  // data.json에서 해당 차량 옵션 불러오기
   const { name } = useParams();
   const options = data[name];
+  const configs = data.configs;
 
-  // SideBar 선택에 따른 세 종류 Viewer 전환
-  // exterior ( Styling Package, Paint, Wheels )
-  // interior-seats ( Seats )
-  // interior-front ( Trim, Steering )
   const [viewMode, setViewMode] = useState("exterior");
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  const dispatch = useDispatch();
+
+  // 옵션 초기 상태 설정
+  useEffect(() => {
+    if (options) {
+      dispatch(setInitialOptions(options));
+      setIsLoaded(true);
+    }
+  }, [name, dispatch, options]);
+
+  if (!isLoaded) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <AnimatedPage>
       <div className="h-full lg:h-[90vh]">
         <div className="h-full lg:flex">
           <Viewer viewMode={viewMode} />
-          <SideBar options={options} setViewMode={setViewMode} />
+          <SideBar
+            options={options}
+            configs={configs}
+            setViewMode={setViewMode}
+          />
         </div>
       </div>
     </AnimatedPage>

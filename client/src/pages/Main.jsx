@@ -8,6 +8,7 @@ import ModelList from "../components/main/ModelList";
 function Main() {
   const modelListRef = useRef(null);
 
+  // Explore Configurator 버튼 클릭 시 ModelList로 스크롤
   const scrollToModelList = () => {
     modelListRef.current.scrollIntoView({
       behavior: "smooth",

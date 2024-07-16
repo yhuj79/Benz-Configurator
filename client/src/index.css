@@ -22,13 +22,23 @@ code {
     monospace;
 }
 
-* ::-webkit-scrollbar { /* 스크롤바 너비 */
+/* swiper css 기본 설정 */
+.swiper-slide {
+  height: auto !important;
+}
+
+/* 스크롤바 너비 */
+* ::-webkit-scrollbar {
 	width: 12px; 
 }
-* ::-webkit-scrollbar-thumb { /* 스크롤바 */
+
+/* 스크롤바 */
+* ::-webkit-scrollbar-thumb {
   background-color: #6B6B6B;
   border-radius: 10px;
 }
-* ::-webkit-scrollbar-track { /* 스크롤바 트랙 */
+
+/* 스크롤바 트랙 */
+* ::-webkit-scrollbar-track {
   background-color: #2C2C2C;
 }

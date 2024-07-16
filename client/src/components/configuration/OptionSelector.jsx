@@ -1,17 +1,9 @@
+import React from "react";
 import { useSelector } from "react-redux";
 
-function OptionSelector({
-  name,
-  icon,
-  desc,
-  isOpen,
-  onClick,
-  choices,
-  action,
-  dispatch,
-  sideBarRef,
-}) {
-  // Access the current selection from the Redux store
+function OptionSelector({ option, isOpen, onClick, dispatch }) {
+  const { name, icon, desc, choices, action } = option;
+
   const selectedOption = useSelector((state) => state.options[icon]);
 
   return (

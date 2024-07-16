@@ -3,14 +3,24 @@ import { createSlice } from "@reduxjs/toolkit";
 export const optionsSlice = createSlice({
   name: "options",
   initialState: {
-    styling: "Default",
-    paint: "Black",
-    wheels: "20alloy",
-    seats: "NapaBlack",
-    trim: "BlackPiano",
-    steering: "Napa",
+    styling: "",
+    paint: "",
+    wheels: "",
+    seats: "",
+    trim: "",
+    steering: "",
   },
   reducers: {
+    // 옵션 초기 상태를 선택 차량 첫 번째 옵션으로 설정
+    setInitialOptions: (state, action) => {
+      state.styling = action.payload.styling[0];
+      state.paint = action.payload.paint[0];
+      state.wheels = action.payload.wheels[0];
+      state.seats = action.payload.seats[0];
+      state.trim = action.payload.trim[0];
+      state.steering = action.payload.steering[0];
+    },
+    // 옵션 상태 변경
     setStyling: (state, action) => {
       state.styling = action.payload;
     },
@@ -33,6 +43,7 @@ export const optionsSlice = createSlice({
 });
 
 export const {
+  setInitialOptions,
   setStyling,
   setPaint,
   setWheels,
@@ -40,4 +51,5 @@ export const {
   setTrim,
   setSteering,
 } = optionsSlice.actions;
+
 export default optionsSlice.reducer;
