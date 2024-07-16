@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade } from "swiper/modules";
 
 import useExteriorHandler from "../../hooks/useExteriorHandler";
+import { exteriorImageUrl, interiorImageUrl } from "../../utils/generateImageUrl";
 
 import Background from "../../assets/viewer/background.png";
 import SliderStage from "../../assets/viewer/sliderstage.png";
@@ -45,43 +45,43 @@ function Viewer({ viewMode }) {
       allowTouchMove={false}
       navigation={false}
       pagination={false}
-      className="relative w-full h-full overflow-hidden flex items-center justify-center"
+      className="transform transition duration-300 relative w-full h-full overflow-hidden flex items-center justify-center"
     >
       <SwiperSlide>
+        <img
+          alt="background"
+          src={Background}
+          className="absolute top-0 left-0 w-full h-full z-10 object-cover brightness-95"
+        />
+        <div className="relative flex items-center justify-center z-20 w-full h-full">
           <img
-            alt="background"
-            src={Background}
-            className="absolute top-0 left-0 w-full h-full z-10 object-cover brightness-95"
+            alt="exterior"
+            src={exteriorImageUrl(styling, paint, wheels, degree)}
+            ref={imgRef}
+            onMouseDown={handleDragStart}
+            onMouseMove={handleDragMove}
+            onMouseUp={handleDragEnd}
+            onMouseLeave={handleDragEnd}
+            className="relative z-11 2xl:pl-13 xl:pl-11 lg:pl-9 md:pl-7 sm:pl-5 pl-3"
           />
-          <div className="relative flex items-center justify-center z-20 w-full h-full">
-            <img
-              alt="exterior"
-              src={`https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-ex-${styling}-${paint}-${wheels}-${degree}.webp`}
-              ref={imgRef}
-              onMouseDown={handleDragStart}
-              onMouseMove={handleDragMove}
-              onMouseUp={handleDragEnd}
-              onMouseLeave={handleDragEnd}
-              className="relative z-11 2xl:pl-13 xl:pl-11 lg:pl-9 md:pl-7 sm:pl-5 pl-3"
-            />
-            <img
-              alt="slider-stage"
-              src={SliderStage}
-              className="absolute z-10 px-5 pointer-events-none"
-            />
-          </div>
+          <img
+            alt="slider-stage"
+            src={SliderStage}
+            className="absolute z-10 px-5 pointer-events-none"
+          />
+        </div>
       </SwiperSlide>
       <SwiperSlide>
         <img
           alt="interior-seats"
-          src={`https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-in-s-${seats}-${trim}-${steering}.webp`}
+          src={interiorImageUrl(seats, trim, steering, "s")}
           className="relative w-full h-full z-10 object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           alt="interior-front"
-          src={`https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-in-f-${seats}-${trim}-${steering}.webp`}
+          src={interiorImageUrl(seats, trim, steering, "f")}
           className="relative w-full h-full z-10 object-cover"
         />
       </SwiperSlide>
