@@ -17,7 +17,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
         <img
           className="w-16 h-16"
           alt={name}
-          src={require(`../../assets/option/icon_${icon}.png`)}
+          src={require(`../../assets/option/icon_${icon}.webp`)}
         />
         <div className="mx-2 mt-1.5">
           <h1 className="text-lg font-bold text-head-line">{name}</h1>
@@ -45,7 +45,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               >
                 <img
                   alt={choice}
-                  src={require(`../../assets/option/${choice}.png`)}
+                  src={require(`../../assets/option/${choice}.webp`)}
                   className="w-[120px] h-[96px] rounded-t-md"
                 />
                 <p className="h-[24px] leading-5 text-desc text-xs">{choice}</p>

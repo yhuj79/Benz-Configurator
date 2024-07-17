@@ -8,8 +8,8 @@ import { EffectFade } from "swiper/modules";
 import useExteriorHandler from "../../hooks/useExteriorHandler";
 import { exteriorImageUrl, interiorImageUrl } from "../../utils/generateImageUrl";
 
-import Background from "../../assets/viewer/background.png";
-import SliderStage from "../../assets/viewer/sliderstage.png";
+import Background from "../../assets/viewer/background.webp";
+import SliderStage from "../../assets/viewer/sliderstage.webp";
 
 function Viewer({ viewMode }) {
   // Redux Store 상태값 반환 (차량 옵션)

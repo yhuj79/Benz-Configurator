@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Logo from "../../assets/main/logo.png";
+import Logo from "../../assets/main/logo.webp";
 import {
   Bars3Icon,
   MapIcon,
@@ -12,7 +12,7 @@ import {
 
 function Header() {
   const [isInitialLoad, setIsInitialLoad] = useState(true);
-  const iconClasses = "h-8 w-8 text-slate-200";
+  const tw_icon = "h-8 w-8 text-slate-200";
 
   // 브라우저 크기 조절 시 애니메이션의 재실행을 방지
   useEffect(() => {
@@ -33,10 +33,10 @@ function Header() {
           rel="noopener noreferrer"
           href="https://www.youtube.com/mercedesbenztv"
         >
-          <PlayIcon className={iconClasses} />
+          <PlayIcon className={tw_icon} />
         </a>
         <Link to="/album">
-          <PhotoIcon className={iconClasses} />
+          <PhotoIcon className={tw_icon} />
         </Link>
       </div>
       <div
@@ -58,14 +58,14 @@ function Header() {
           rel="noopener noreferrer"
           href="https://www.google.co.kr/maps/search/benz"
         >
-          <MapIcon className={iconClasses} />
+          <MapIcon className={tw_icon} />
         </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.mercedes-benz.com"
         >
-          <GlobeAltIcon className={iconClasses} />
+          <GlobeAltIcon className={tw_icon} />
         </a>
       </div>
       <div
@@ -73,7 +73,7 @@ function Header() {
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
         } md:hidden flex items-center`}
       >
-        <Bars3Icon className={iconClasses} />
+        <Bars3Icon className={tw_icon} />
       </div>
     </header>
   );
