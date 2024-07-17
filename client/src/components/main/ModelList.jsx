@@ -2,8 +2,8 @@ import Model from "./Model";
 
 function ModelList() {
   return (
-    <div className="w-5/6 mx-auto py-20">
-      <div className="md:flex relative">
+    <div className="mx-auto py-20 w-5/6">
+      <div className="relative md:flex">
         <Model
           image={require("../../assets/main/model_amg.webp")}
           name="AMG"
@@ -15,7 +15,7 @@ function ModelList() {
           link="/"
         />
       </div>
-      <div className="md:flex relative">
+      <div className="relative md:flex">
         <Model
           image={require("../../assets/main/model_cla.webp")}
           name="CLA-Class"

@@ -42,7 +42,7 @@ function Configuration() {
   return (
     <AnimatedPage>
       <div className="h-full lg:h-[92vh]">
-        <div className="h-full lg:flex">
+        <div className="lg:flex h-full">
           <Viewer viewMode={viewMode} />
           <SideBar
             options={options}

@@ -20,18 +20,18 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
           src={require(`../../assets/option/icon_${icon}.webp`)}
         />
         <div className="mx-2 mt-1.5">
-          <h1 className="text-lg font-bold text-head-line">{name}</h1>
-          <p className="text-sm text-desc">{desc}</p>
+          <h1 className="font-bold text-head-line text-lg">{name}</h1>
+          <p className="text-desc text-sm">{desc}</p>
           {isOpen && (
-            <p className="mt-2 text-sm text-desc">
+            <p className="mt-2 text-desc text-sm">
               selected :{" "}
-              <span className="text-head-line font-bold">{selectedOption}</span>
+              <span className="font-bold text-head-line">{selectedOption}</span>
             </p>
           )}
         </div>
       </div>
       {isOpen && (
-        <div className="mx-5 mt-2 mb-8 bg-dark-gray animate-appearLeft">
+        <div className="bg-dark-gray mx-5 mt-2 mb-8 animate-appearLeft">
           <div className="flex">
             {choices.map((choice) => (
               <div
@@ -46,9 +46,9 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                 <img
                   alt={choice}
                   src={require(`../../assets/option/${choice}.webp`)}
-                  className="w-[120px] h-[96px] rounded-t-md"
+                  className="rounded-t-md w-[120px] h-[96px]"
                 />
-                <p className="h-[24px] leading-5 text-desc text-xs">{choice}</p>
+                <p className="h-[24px] text-desc text-xs leading-5">{choice}</p>
               </div>
             ))}
           </div>

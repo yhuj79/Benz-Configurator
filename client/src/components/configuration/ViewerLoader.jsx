@@ -1,6 +1,6 @@
 function ViewerLoader() {
   return (
-    <div className="h-[92vh] flex items-center justify-center">
+    <div className="flex justify-center items-center h-[92vh]">
       <h1>Loading...</h1>
     </div>
   );

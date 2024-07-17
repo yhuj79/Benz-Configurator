@@ -2,15 +2,15 @@ import { Link } from "react-router-dom";
 
 function Model({ image, name, link }) {
   return (
-    <div className="md:w-1/2 m-2 overflow-hidden group">
+    <div className="m-2 md:w-1/2 overflow-hidden group">
       <Link to={link} className="relative overflow-hidden group">
         <img
-          className="w-full h-[140px] md:h-auto object-cover md:opacity-70 md:transform md:transition md:duration-300 md:ease-in-out md:group-hover:scale-110 md:group-hover:opacity-100 opacity-100"
+          className="md:group-hover:scale-110 opacity-100 md:opacity-70 md:group-hover:opacity-100 w-full h-[140px] md:h-auto md:transform md:transition md:duration-300 object-cover md:ease-in-out"
           alt=""
           src={image}
         />
-        <div className="absolute bottom-0 left-0 mb-1 ml-2 md:mb-4 md:ml-5">
-          <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium whitespace-nowrap text-shadow text-slate-200 md:transform md:transition-transform md:duration-300 md:ease-in-out md:group-hover:scale-110">
+        <div className="bottom-0 left-0 absolute mb-1 md:mb-4 ml-2 md:ml-5">
+          <p className="md:group-hover:scale-110 text-shadow font-medium font-serif text-2xl text-slate-200 md:text-3xl lg:text-4xl whitespace-nowrap md:transform md:transition-transform md:duration-300 md:ease-in-out">
             {name}
           </p>
         </div>

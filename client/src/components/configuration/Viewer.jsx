@@ -45,15 +45,15 @@ function Viewer({ viewMode }) {
       allowTouchMove={false}
       navigation={false}
       pagination={false}
-      className="transform transition duration-300 relative w-full h-full overflow-hidden flex items-center justify-center"
+      className="relative flex justify-center items-center w-full h-full transform transition duration-300 overflow-hidden"
     >
       <SwiperSlide>
         <img
           alt="background"
           src={Background}
-          className="absolute top-0 left-0 w-full h-full z-10 object-cover brightness-95"
+          className="top-0 brightness-95 left-0 z-10 absolute w-full h-full object-cover"
         />
-        <div className="relative flex items-center justify-center z-20 w-full h-full">
+        <div className="relative z-20 flex justify-center items-center w-full h-full">
           <img
             alt="exterior"
             src={exteriorImageUrl(styling, paint, wheels, degree)}
@@ -62,12 +62,12 @@ function Viewer({ viewMode }) {
             onMouseMove={handleDragMove}
             onMouseUp={handleDragEnd}
             onMouseLeave={handleDragEnd}
-            className="relative z-11 2xl:pl-13 xl:pl-11 lg:pl-9 md:pl-7 sm:pl-5 pl-3"
+            className="relative z-11 pl-3 sm:pl-5 md:pl-7 lg:pl-9 2xl:pl-13 xl:pl-11"
           />
           <img
             alt="slider-stage"
             src={SliderStage}
-            className="absolute w-full z-10 px-5 pointer-events-none"
+            className="z-10 absolute px-5 w-full pointer-events-none"
           />
         </div>
       </SwiperSlide>
@@ -75,14 +75,14 @@ function Viewer({ viewMode }) {
         <img
           alt="interior-seats"
           src={interiorImageUrl(seats, trim, steering, "s")}
-          className="relative w-full h-full z-10 object-cover"
+          className="relative z-10 w-full h-full object-cover"
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           alt="interior-front"
           src={interiorImageUrl(seats, trim, steering, "f")}
-          className="relative w-full h-full z-10 object-cover"
+          className="relative z-10 w-full h-full object-cover"
         />
       </SwiperSlide>
     </Swiper>

@@ -22,7 +22,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="h-[8vh] z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
+    <header className="relative z-10 flex justify-between items-center bg-black px-10 py-6 md:py-10 h-[8vh] font-serif text-lg text-slate-200 tracking-wider">
       <div
         className={`z-20 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
@@ -45,7 +45,7 @@ function Header() {
         }`}
       >
         <Link to="/" className="flex flex-col items-center no-underline">
-          <img className="w-12 filter brightness-150" alt="Logo" src={Logo} />
+          <img className="brightness-150 w-12 filter" alt="Logo" src={Logo} />
         </Link>
       </div>
       <div

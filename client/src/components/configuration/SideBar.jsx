@@ -30,7 +30,7 @@ function SideBar({ options, configs, setViewMode }) {
   };
 
   return (
-    <div className="flex-2 lg:min-w-[420px] min-w-full max-w-full h-full pb-4 bg-dark-gray overflow-y-auto scrollbar-hide">
+    <div className="flex-2 bg-dark-gray pb-4 min-w-full lg:min-w-[420px] max-w-full h-full overflow-y-auto scrollbar-hide">
       {configs.map((m) => {
         const action = actionsMap[m.action];
         const choices = options[m.choices];
