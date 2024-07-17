@@ -1,13 +1,9 @@
-import imageMainGif from "../../assets/main/intro.gif";
-
 function Banner({ scrollToModelList }) {
   return (
     <div className="relative h-screen">
-      <img
-        className="h-[85%] w-full object-cover m-auto"
-        alt=""
-        src={imageMainGif}
-      />
+      <video muted autoPlay loop className="h-[85%] w-full object-cover m-auto">
+        <source src={require("../../assets/main/intro.mp4")} type="video/mp4" />
+      </video>
       <div className="absolute top-0 left-0 w-full h-[85%]">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>

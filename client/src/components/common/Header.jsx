@@ -22,7 +22,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="h-[10vh] z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
+    <header className="h-[8vh] z-10 relative flex justify-between items-center bg-black text-slate-200 text-lg py-6 md:py-10 px-10 tracking-wider font-serif">
       <div
         className={`z-20 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""

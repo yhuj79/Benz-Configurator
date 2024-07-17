@@ -67,7 +67,7 @@ function Viewer({ viewMode }) {
           <img
             alt="slider-stage"
             src={SliderStage}
-            className="absolute z-10 px-5 pointer-events-none"
+            className="absolute w-full z-10 px-5 pointer-events-none"
           />
         </div>
       </SwiperSlide>
