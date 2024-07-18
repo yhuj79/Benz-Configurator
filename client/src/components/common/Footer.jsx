@@ -13,21 +13,20 @@ function Footer() {
           passion for the brand, products and services of Mercedes-Benz.
         </p>
       </div>
-      <Link
-        to="/"
-        className="flex flex-col items-center mt-5 mb-2 no-underline"
-      >
-        <img className="brightness-150 w-12 filter" alt="Logo" src={Logo} />
-      </Link>
-      <div className="flex flex-wrap justify-center opacity-70">
-        <p className="mx-12 my-5">Provider</p>
-        <p className="mx-12 my-5">Legal Notice</p>
-        <p className="mx-12 my-5">Cookies</p>
-        <p className="mx-12 my-5">Privacy Statement</p>
-        <p className="mx-12 my-5">Newsfeed (RSS)</p>
-        <p className="mx-12 my-5">Contact</p>
-        <p className="mx-12 my-5">Careers</p>
-        <p className="mx-12 my-5">Investor Relations</p>
+      <div className="flex justify-center mt-5 mb-2">
+        <Link to="/" className="flex flex-col w-12 no-underline">
+          <img className="brightness-150 filter" alt="Logo" src={Logo} />
+        </Link>
+      </div>
+      <div className="justify-center gap-x-12 gap-y-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 opacity-70 mt-5">
+        <p className="mx-12">Provider</p>
+        <p className="mx-12">Legal Notice</p>
+        <p className="mx-12">Cookies</p>
+        <p className="mx-12">Privacy Statement</p>
+        <p className="mx-12">Newsfeed (RSS)</p>
+        <p className="mx-12">Contact</p>
+        <p className="mx-12">Careers</p>
+        <p className="mx-12">Investor Relations</p>
       </div>
     </footer>
   );
