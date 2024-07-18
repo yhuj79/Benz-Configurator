@@ -1,5 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const calculateTotalPrice = (state, prices) => {
+  return (
+    prices.base +
+    prices.styling[state.styling] +
+    prices.paint[state.paint] +
+    prices.wheels[state.wheels] +
+    prices.seats[state.seats] +
+    prices.trim[state.trim] +
+    prices.steering[state.steering]
+  );
+};
+
 export const optionsSlice = createSlice({
   name: "options",
   initialState: {
@@ -9,35 +21,55 @@ export const optionsSlice = createSlice({
     seats: "",
     trim: "",
     steering: "",
+    fullName: "",
+    totalPrice: 0,
+    prices: {},
   },
   reducers: {
-    // 옵션 초기 상태를 선택 차량 첫 번째 옵션으로 설정
     setInitialOptions: (state, action) => {
-      state.styling = action.payload.styling[0];
-      state.paint = action.payload.paint[0];
-      state.wheels = action.payload.wheels[0];
-      state.seats = action.payload.seats[0];
-      state.trim = action.payload.trim[0];
-      state.steering = action.payload.steering[0];
+      const {
+        styling,
+        paint,
+        wheels,
+        seats,
+        trim,
+        steering,
+        fullName,
+        prices,
+      } = action.payload;
+      state.styling = styling[0];
+      state.paint = paint[0];
+      state.wheels = wheels[0];
+      state.seats = seats[0];
+      state.trim = trim[0];
+      state.steering = steering[0];
+      state.fullName = fullName;
+      state.prices = prices;
+      state.totalPrice = calculateTotalPrice(state, prices);
     },
-    // 옵션 상태 변경
     setStyling: (state, action) => {
       state.styling = action.payload;
+      state.totalPrice = calculateTotalPrice(state, state.prices);
     },
     setPaint: (state, action) => {
       state.paint = action.payload;
+      state.totalPrice = calculateTotalPrice(state, state.prices);
     },
     setWheels: (state, action) => {
       state.wheels = action.payload;
+      state.totalPrice = calculateTotalPrice(state, state.prices);
     },
     setSeats: (state, action) => {
       state.seats = action.payload;
+      state.totalPrice = calculateTotalPrice(state, state.prices);
     },
     setTrim: (state, action) => {
       state.trim = action.payload;
+      state.totalPrice = calculateTotalPrice(state, state.prices);
     },
     setSteering: (state, action) => {
       state.steering = action.payload;
+      state.totalPrice = calculateTotalPrice(state, state.prices);
     },
   },
 });

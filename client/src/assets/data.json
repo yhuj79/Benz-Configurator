@@ -5,7 +5,17 @@
     "wheels": ["20alloy", "20multialloy"],
     "seats": ["NapaBlack", "NapaBrown", "NapaRed"],
     "trim": ["BlackPiano", "Carbon"],
-    "steering": ["Napa", "Dinamica"]
+    "steering": ["Napa", "Dinamica"],
+    "fullName": "Mercedes-AMG GT 43 4MATIC+",
+    "prices": {
+      "base": 137600000,
+      "styling": { "Default": 0, "V8": 5940000 },
+      "paint": { "Black": 0, "PolaWhite": 0 },
+      "wheels": { "20alloy": 0, "20multialloy": 1030000 },
+      "seats": { "NapaBlack": 0, "NapaBrown": 6250000, "NapaRed": 5430000 },
+      "trim": { "BlackPiano": 0, "Carbon": 6040000 },
+      "steering": { "Napa": 0, "Dinamica": 870000 }
+    }
   },
   "sclass": {
     "styling": ["Default", "V6", "V8"],
@@ -13,9 +23,18 @@
     "wheels": ["18alloy", "20alloy"],
     "seats": ["Brown", "NapaBrown"],
     "trim": ["Wood", "CarbonWhite"],
-    "steering": ["Classic", "Sports"]
+    "steering": ["Classic", "Sports"],
+    "fullName": "S 450 d 4MATIC AMG Line",
+    "prices": {
+      "base": 120000000,
+      "styling": { "Default": 0, "V6": 3000000, "V8": 5000000 },
+      "paint": { "Sliver": 0, "Black": 0, "Chrome": 2000000 },
+      "wheels": { "18alloy": 0, "20alloy": 1500000 },
+      "seats": { "Brown": 0, "NapaBrown": 4000000 },
+      "trim": { "Wood": 0, "CarbonWhite": 2500000 },
+      "steering": { "Classic": 0, "Sports": 1000000 }
+    }
   },
-
   "configs": [
     {
       "name": "Styling Package",

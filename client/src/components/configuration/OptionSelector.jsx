@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 
 function OptionSelector({ option, isOpen, onClick, dispatch }) {
   const { name, icon, desc, choices, action } = option;
-
   const selectedOption = useSelector((state) => state.options[icon]);
+  const prices = useSelector((state) => state.options.prices[icon]);
 
   return (
     <div>
@@ -49,6 +49,10 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                   className="rounded-t-md w-[120px] h-[96px]"
                 />
                 <p className="h-[24px] text-desc text-xs leading-5">{choice}</p>
+                <p className="h-[24px] text-desc text-xs">
+                  {prices[choice] > 0 &&
+                    `+ ${prices[choice].toLocaleString()} ₩`}
+                </p>
               </div>
             ))}
           </div>
