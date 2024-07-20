@@ -4,7 +4,7 @@ import Logo from "../../assets/main/logo.webp";
 
 function Footer() {
   return (
-    <footer className="bg-gray-700 py-12 text-center">
+    <footer className="bg-gray-700 py-12 text-center text-desc">
       <div className="opacity-70 mx-auto mt-2 w-3/5">
         <p>
           This site is a project for practicing web development. Product Image

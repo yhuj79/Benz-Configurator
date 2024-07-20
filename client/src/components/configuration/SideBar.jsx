@@ -20,7 +20,7 @@ const actionsMap = {
   setSteering,
 };
 
-function SideBar({ options, configs, setViewMode }) {
+function SideBar({ data, configs, setViewMode }) {
   const dispatch = useDispatch();
   const [openOption, setOpenOption] = useState(null);
 
@@ -30,10 +30,10 @@ function SideBar({ options, configs, setViewMode }) {
   };
 
   return (
-    <div className="flex-2 bg-dark-gray pb-4 min-w-full lg:min-w-[420px] max-w-full h-full overflow-y-auto scrollbar-hide">
+    <div className="flex-2 bg-dark-gray pb-4 border-l-0 border-l-md-gray md:border-l-2 min-w-full lg:min-w-[426px] max-w-full h-full overflow-y-auto scrollbar-hide">
       {configs.map((m) => {
         const action = actionsMap[m.action];
-        const choices = options[m.choices];
+        const choices = data[m.choices];
 
         return (
           <OptionSelector

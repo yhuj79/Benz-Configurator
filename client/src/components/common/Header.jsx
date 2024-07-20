@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/main/logo.webp";
 import {
   Bars3Icon,
+  UserCircleIcon,
   MapIcon,
   PhotoIcon,
   PlayIcon,
@@ -22,9 +23,9 @@ function Header() {
   }, []);
 
   return (
-    <header className="relative z-10 flex justify-between items-center bg-black px-10 py-6 md:py-10 h-[8vh] font-serif text-lg text-slate-200 tracking-wider">
+    <header className="z-10 flex justify-between items-center bg-black px-10 py-6 md:py-10 h-[8vh] font-serif text-lg text-slate-200 tracking-wider">
       <div
-        className={`z-20 ${
+        className={`z-11 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
         } hidden md:flex space-x-12`}
       >
@@ -40,7 +41,14 @@ function Header() {
         </Link>
       </div>
       <div
-        className={`absolute inset-0 flex justify-center items-center ${
+        className={`z-11 ${
+          isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
+        } md:hidden flex items-center`}
+      >
+        <Bars3Icon className={tw_icon} />
+      </div>
+      <div
+        className={`inset-0 flex justify-center items-center ${
           isInitialLoad ? "animate-appearZoom" : ""
         }`}
       >
@@ -49,7 +57,7 @@ function Header() {
         </Link>
       </div>
       <div
-        className={`z-20 ${
+        className={`z-11 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
         } hidden md:flex space-x-12`}
       >
@@ -69,11 +77,11 @@ function Header() {
         </a>
       </div>
       <div
-        className={`z-20 ${
+        className={`z-11 ${
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
-        } md:hidden flex items-center`}
+        } md:hidden opacity-0`}
       >
-        <Bars3Icon className={tw_icon} />
+        <UserCircleIcon className={tw_icon} />
       </div>
     </header>
   );

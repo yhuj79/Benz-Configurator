@@ -1,6 +1,6 @@
 import RingLoader from "react-spinners/RingLoader";
 
-function ViewerLoader() {
+function Loader() {
 
   const override: CSSProperties = {
     marginBottom: "70px",
@@ -19,4 +19,4 @@ function ViewerLoader() {
   );
 }
 
-export default ViewerLoader;
+export default Loader;

@@ -6,7 +6,10 @@ import "swiper/css/effect-fade";
 import { EffectFade } from "swiper/modules";
 
 import useExteriorHandler from "../../hooks/useExteriorHandler";
-import { exteriorImageUrl, interiorImageUrl } from "../../utils/generateImageUrl";
+import {
+  exteriorImageUrl,
+  interiorImageUrl,
+} from "../../utils/generateImageUrl";
 
 import Background from "../../assets/viewer/background.webp";
 import SliderStage from "../../assets/viewer/sliderstage.webp";
@@ -38,54 +41,56 @@ function Viewer({ viewMode }) {
   }, [viewMode]);
 
   return (
-    <Swiper
-      ref={swiperRef}
-      modules={[EffectFade]}
-      effect="fade"
-      allowTouchMove={false}
-      navigation={false}
-      pagination={false}
-      className="relative flex justify-center items-center w-full h-full transform transition duration-300 overflow-hidden"
-    >
-      <SwiperSlide>
-        <img
-          alt="background"
-          src={Background}
-          className="top-0 brightness-95 left-0 z-10 absolute w-full h-full object-cover"
-        />
-        <div className="relative z-20 flex justify-center items-center w-full h-full">
+    <div className="sm:relative top-[100px] sm:top-auto z-20 sticky border-md-gray border-b-2 sm:border-b-0 w-full h-full overflow-hidden">
+      <Swiper
+        ref={swiperRef}
+        modules={[EffectFade]}
+        effect="fade"
+        allowTouchMove={false}
+        navigation={false}
+        pagination={false}
+        className="flex justify-center items-center w-full h-full transform transition duration-300 overflow-hidden"
+      >
+        <SwiperSlide>
           <img
-            alt="exterior"
-            src={exteriorImageUrl(styling, paint, wheels, degree)}
-            ref={imgRef}
-            onMouseDown={handleDragStart}
-            onMouseMove={handleDragMove}
-            onMouseUp={handleDragEnd}
-            onMouseLeave={handleDragEnd}
-            className="relative z-11 pl-3 sm:pl-5 md:pl-7 lg:pl-9 2xl:pl-13 xl:pl-11"
+            alt="background"
+            src={Background}
+            className="top-0 brightness-95 left-0 z-10 absolute w-full h-full object-cover"
           />
+          <div className="relative z-20 flex justify-center items-center w-full h-full">
+            <img
+              alt="exterior"
+              src={exteriorImageUrl(styling, paint, wheels, degree)}
+              ref={imgRef}
+              onMouseDown={handleDragStart}
+              onMouseMove={handleDragMove}
+              onMouseUp={handleDragEnd}
+              onMouseLeave={handleDragEnd}
+              className="relative z-11 pl-3 sm:pl-5 md:pl-7 lg:pl-9 2xl:pl-13 xl:pl-11"
+            />
+            <img
+              alt="slider-stage"
+              src={SliderStage}
+              className="z-10 absolute px-5 w-full pointer-events-none"
+            />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
           <img
-            alt="slider-stage"
-            src={SliderStage}
-            className="z-10 absolute px-5 w-full pointer-events-none"
+            alt="interior-seats"
+            src={interiorImageUrl(seats, trim, steering, "s")}
+            className="relative z-10 w-full h-full object-cover"
           />
-        </div>
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          alt="interior-seats"
-          src={interiorImageUrl(seats, trim, steering, "s")}
-          className="relative z-10 w-full h-full object-cover"
-        />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img
-          alt="interior-front"
-          src={interiorImageUrl(seats, trim, steering, "f")}
-          className="relative z-10 w-full h-full object-cover"
-        />
-      </SwiperSlide>
-    </Swiper>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            alt="interior-front"
+            src={interiorImageUrl(seats, trim, steering, "f")}
+            className="relative z-10 w-full h-full object-cover"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </div>
   );
 }
 

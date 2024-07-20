@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 
 function OptionSelector({ option, isOpen, onClick, dispatch }) {
   const { name, icon, desc, choices, action } = option;
-  const selectedOption = useSelector((state) => state.options[icon]);
+  const selected = useSelector((state) => state.options[icon]);
   const prices = useSelector((state) => state.options.prices[icon]);
 
   return (
     <div>
       <div
         className={`flex bg-black-gray hover:bg-dark-gray transform transition duration-300 mx-5 mt-4 p-3 rounded-lg border-2 border-md-gray cursor-pointer ${
-          isOpen ? "bg-dark-gray scale-110 border-none" : ""
+          isOpen ? "bg-dark-gray scale-105 border-none" : ""
         }`}
         onClick={onClick}
       >
@@ -25,21 +25,19 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
           {isOpen && (
             <p className="mt-2 text-desc text-sm">
               selected :{" "}
-              <span className="font-bold text-head-line">{selectedOption}</span>
+              <span className="font-bold text-head-line">{selected}</span>
             </p>
           )}
         </div>
       </div>
       {isOpen && (
         <div className="bg-dark-gray mx-5 mt-2 mb-8 animate-appearLeft">
-          <div className="flex">
+          <div className="sm:flex hidden">
             {choices.map((choice) => (
               <div
                 key={choice}
                 className={`text-center w-[120px] h-[120px] transform transition duration-300 border-2 m-1 ${
-                  selectedOption === choice
-                    ? "border-head-line"
-                    : "border-md-gray"
+                  selected === choice ? "border-head-line" : "border-md-gray"
                 } bg-black-gray rounded-lg`}
                 onClick={() => dispatch(action(choice))}
               >
@@ -53,6 +51,30 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                   {prices[choice] > 0 &&
                     `+ ${prices[choice].toLocaleString()} ₩`}
                 </p>
+              </div>
+            ))}
+          </div>
+          <div className="block sm:hidden">
+            {choices.map((choice) => (
+              <div
+                key={choice}
+                className={`flex text-center w-full transform transition duration-300 border-2 mb-2 ${
+                  selected === choice ? "border-head-line" : "border-md-gray"
+                } bg-black-gray rounded-lg`}
+                onClick={() => dispatch(action(choice))}
+              >
+                <img
+                  alt={choice}
+                  src={require(`../../assets/option/${choice}.webp`)}
+                  className="rounded-l-md w-[45px] h-[45px]"
+                />
+                <div className="flex justify-between px-2 w-full">
+                  <p className="text-desc text-sm leading-[45px]">{choice}</p>
+                  <p className="text-desc text-sm leading-[45px]">
+                    {prices[choice] > 0 &&
+                      `+ ${prices[choice].toLocaleString()} ₩`}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
