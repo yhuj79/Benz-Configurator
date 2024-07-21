@@ -15,7 +15,7 @@ function Footer() {
       </div>
       <div className="flex justify-center mt-5 mb-2">
         <Link to="/" className="flex flex-col w-12 no-underline">
-          <img className="brightness-150 filter" alt="Logo" src={Logo} />
+          <img className="brightness-150" alt="Logo" src={Logo} />
         </Link>
       </div>
       <div className="justify-center gap-x-12 gap-y-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 opacity-70 mt-5">

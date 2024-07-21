@@ -7,7 +7,7 @@ function Summary() {
   const totalPrice = useSelector((state) => state.options.totalPrice);
 
   return (
-    <div className="top-0 left-0 z-30 md:absolute sticky md:border-2 md:border-md-gray bg-black-gray md:m-4 px-6 py-4 border-b-2 border-b-md-gray md:rounded-lg md:min-w-[360px]">
+    <div className="top-50 left-0 z-30 md:absolute sticky md:border-2 md:border-md-gray bg-black-gray md:m-4 px-6 py-4 border-b-2 border-b-md-gray md:rounded-lg md:min-w-[360px]">
       <h1 className="font-bold text-head-line text-lg md:text-xl">
         {fullName}
       </h1>

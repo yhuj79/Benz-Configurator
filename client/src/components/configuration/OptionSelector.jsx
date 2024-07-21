@@ -9,7 +9,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
   return (
     <div>
       <div
-        className={`flex bg-black-gray hover:bg-dark-gray transform transition duration-300 mx-5 mt-4 p-3 rounded-lg border-2 border-md-gray cursor-pointer ${
+        className={`flex bg-black-gray md:hover:bg-dark-gray transform transition duration-300 mx-5 mt-4 p-3 rounded-lg border-2 border-md-gray cursor-pointer ${
           isOpen ? "bg-dark-gray scale-105 border-none" : ""
         }`}
         onClick={onClick}

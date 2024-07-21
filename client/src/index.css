@@ -27,18 +27,21 @@ code {
   height: auto !important;
 }
 
-/* 스크롤바 너비 */
-* ::-webkit-scrollbar {
-	width: 12px; 
-}
+/* 데스크탑 환경에서만 적용 */
+@media (min-width: 768px) {
+  /* 스크롤바 너비 */
+  * ::-webkit-scrollbar {
+    width: 12px; 
+  }
 
-/* 스크롤바 */
-* ::-webkit-scrollbar-thumb {
-  background-color: #6B6B6B;
-  border-radius: 10px;
-}
+  /* 스크롤바 */
+  * ::-webkit-scrollbar-thumb {
+    background-color: #6B6B6B;
+    border-radius: 10px;
+  }
 
-/* 스크롤바 트랙 */
-* ::-webkit-scrollbar-track {
-  background-color: #2C2C2C;
+  /* 스크롤바 트랙 */
+  * ::-webkit-scrollbar-track {
+    background-color: #2C2C2C;
+  }
 }

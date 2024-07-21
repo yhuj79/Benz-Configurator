@@ -1,10 +1,10 @@
 function Banner({ scrollToModelList }) {
   return (
-    <div className="relative h-screen">
+    <div className="relative my-[-5px] h-screen">
       <video muted autoPlay loop playsInline className="m-auto w-full h-[84%] object-cover">
         <source src={require("../../assets/main/intro.mp4")} type="video/mp4" />
       </video>
-      <div className="top-0 left-0 absolute w-full h-[85%] pointer-events-none">
+      <div className="top-0 left-0 absolute my-[-4px] w-full h-[85%] pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>

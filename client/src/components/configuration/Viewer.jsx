@@ -41,7 +41,7 @@ function Viewer({ viewMode }) {
   }, [viewMode]);
 
   return (
-    <div className="sm:relative top-[100px] sm:top-auto z-20 sticky border-md-gray border-b-2 sm:border-b-0 w-full h-full overflow-hidden">
+    <div className="sm:relative top-0 sm:top-auto z-20 sticky border-md-gray border-b-2 sm:border-b-0 w-full h-full overflow-hidden">
       <Swiper
         ref={swiperRef}
         modules={[EffectFade]}
