@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+import { optionImageUrl } from "../../utils/generateImageUrl";
+
 function OptionSelector({ option, isOpen, onClick, dispatch }) {
   const { name, icon, desc, choices, action } = option;
   const selected = useSelector((state) => state.options[icon]);
@@ -43,7 +45,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               >
                 <img
                   alt={choice}
-                  src={require(`../../assets/option/${choice}.webp`)}
+                  src={optionImageUrl(choice)}
                   className="rounded-t-md w-[120px] h-[96px]"
                 />
                 <p className="h-[24px] text-desc text-xs leading-5">{choice}</p>
@@ -65,7 +67,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               >
                 <img
                   alt={choice}
-                  src={require(`../../assets/option/${choice}.webp`)}
+                  src={optionImageUrl(choice)}
                   className="rounded-l-md w-[45px] h-[45px]"
                 />
                 <div className="flex justify-between px-2 w-full">

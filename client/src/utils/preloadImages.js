@@ -1,11 +1,15 @@
-import { exteriorImageUrl, interiorImageUrl } from "./generateImageUrl";
+import {
+  exteriorImageUrl,
+  interiorImageUrl,
+  optionImageUrl,
+} from "./generateImageUrl";
 
-// 선택 차량 Image Pre Loading
+// Image Pre Loading
 export const preloadImages = (options) => {
   const images = [];
   const degrees = Array.from({ length: 36 }, (_, i) => i + 1);
 
-  // Styling Package, Paint, Wheels 옵션 순회
+  // 차량 이미지 - Styling Package, Paint, Wheels 옵션 순회
   options.styling.forEach((styling) => {
     options.paint.forEach((paint) => {
       options.wheels.forEach((wheels) => {
@@ -16,7 +20,7 @@ export const preloadImages = (options) => {
     });
   });
 
-  // Seats, Trim, Steering 옵션 순회
+  // 차량 이미지 - Seats, Trim, Steering 옵션 순회
   options.seats.forEach((seats) => {
     options.trim.forEach((trim) => {
       options.steering.forEach((steering) => {
@@ -25,6 +29,27 @@ export const preloadImages = (options) => {
       });
     });
   });
+
+  // 차량 배경 이미지
+  images.push(
+    `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/viewer/background.webp`
+  );
+  images.push(
+    `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/viewer/sliderstage.webp`
+  );
+
+  // 옵션 아이콘 이미지
+  const addOptionImages = (optionArray) => {
+    optionArray.forEach((option) => {
+      images.push(optionImageUrl(option));
+    });
+  };
+  addOptionImages(options.styling);
+  addOptionImages(options.paint);
+  addOptionImages(options.wheels);
+  addOptionImages(options.seats);
+  addOptionImages(options.trim);
+  addOptionImages(options.steering);
 
   // 비동기 작업 처리
   const promises = images.map((src) => {

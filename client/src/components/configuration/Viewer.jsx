@@ -11,9 +11,6 @@ import {
   interiorImageUrl,
 } from "../../utils/generateImageUrl";
 
-import Background from "../../assets/viewer/background.webp";
-import SliderStage from "../../assets/viewer/sliderstage.webp";
-
 function Viewer({ viewMode }) {
   // Redux Store 상태값 반환 (차량 옵션)
   const { styling, paint, wheels, seats, trim, steering } = useSelector(
@@ -54,7 +51,7 @@ function Viewer({ viewMode }) {
         <SwiperSlide>
           <img
             alt="background"
-            src={Background}
+            src="https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/viewer/background.webp"
             className="top-0 brightness-95 left-0 z-10 absolute w-full h-full object-cover"
           />
           <div className="relative z-20 flex justify-center items-center w-full h-full">
@@ -70,7 +67,7 @@ function Viewer({ viewMode }) {
             />
             <img
               alt="slider-stage"
-              src={SliderStage}
+              src="https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/viewer/sliderstage.webp"
               className="z-10 absolute px-5 w-full pointer-events-none"
             />
           </div>

@@ -7,3 +7,7 @@ export const exteriorImageUrl = (styling, paint, wheels, degree) => {
 export const interiorImageUrl = (seats, trim, steering, view) => {
   return `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/amg/amg-in-${view}-${seats}-${trim}-${steering}.webp`;
 };
+
+export const optionImageUrl = (option) => {
+  return `https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/option/${option}.webp`;
+};
