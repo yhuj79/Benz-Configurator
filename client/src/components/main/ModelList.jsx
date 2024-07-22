@@ -12,7 +12,7 @@ function ModelList() {
         <Model
           image={require("../../assets/main/model_s.webp")}
           name="S-Class"
-          link="/"
+          link="/configuration/sclass"
         />
       </div>
       <div className="relative md:flex">

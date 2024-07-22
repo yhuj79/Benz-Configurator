@@ -13,28 +13,36 @@
       "styling": { "Default": 0, "V8": 5940000 },
       "paint": { "Black": 0, "PolaWhite": 0 },
       "wheels": { "FiveTwin": 0, "MultiSpoke": 1030000 },
-      "seats": { "ManufaktBlack": 0, "ManufaktBrown": 6250000, "ManufaktRed": 5430000 },
+      "seats": {
+        "ManufaktBlack": 0,
+        "ManufaktBrown": 6250000,
+        "ManufaktRed": 5430000
+      },
       "trim": { "BlackPiano": 0, "Carbon": 6040000 },
       "steering": { "Napa": 0, "Dinamica": 870000 }
     }
   },
   "sclass": {
     "name": "sclass",
-    "fullName": "S 450 d 4MATIC AMG Line",
-    "styling": ["Default", "V6", "V8"],
-    "paint": ["Sliver", "Black", "Chrome"],
-    "wheels": ["18alloy", "20alloy"],
-    "seats": ["Brown", "ManufaktBrown"],
-    "trim": ["Wood", "CarbonWhite"],
-    "steering": ["Classic", "Sports"],
+    "fullName": "S 450 4MATIC Saloon",
+    "styling": ["Default"],
+    "paint": ["Silver", "Obsidian", "Gold"],
+    "wheels": ["MultiSilver", "MultiLight"],
+    "seats": ["LeatherBlack", "LeatherBrown", "LeatherBeige"],
+    "trim": ["BlackWood", "WalnutWood", "Lacquer"],
+    "steering": ["Sports", "WoodLeather"],
     "prices": {
-      "base": 120000000,
-      "styling": { "Default": 0, "V6": 3000000, "V8": 5000000 },
-      "paint": { "Sliver": 0, "Black": 0, "Chrome": 2000000 },
-      "wheels": { "18alloy": 0, "20alloy": 1500000 },
-      "seats": { "Brown": 0, "ManufaktBrown": 4000000 },
-      "trim": { "Wood": 0, "CarbonWhite": 2500000 },
-      "steering": { "Classic": 0, "Sports": 1000000 }
+      "base": 178500000,
+      "styling": { "Default": 0 },
+      "paint": { "Silver": 0, "Obsidian": 0, "Gold": 1400000 },
+      "wheels": { "MultiSilver": 0, "MultiLight": 1280000 },
+      "seats": {
+        "LeatherBlack": 0,
+        "LeatherBrown": 730000,
+        "LeatherBeige": 730000
+      },
+      "trim": { "BlackWood": 0, "WalnutWood": 0, "Lacquer": 2400000 },
+      "steering": { "Sports": 0, "WoodLeather": 1270000 }
     }
   },
   "configs": [
