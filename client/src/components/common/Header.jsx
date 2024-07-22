@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../../assets/main/logo.webp";
 import {
-  LiveTvSharp,
+  IntegrationInstructionsSharp,
   PhotoLibrarySharp,
   MapOutlined,
   LanguageOutlined,
@@ -27,16 +27,16 @@ function Header() {
           isInitialLoad ? "opacity-0 animate-appearNormal delay-1.5s" : ""
         } hidden md:flex space-x-12`}
       >
+        <Link to="/gallery">
+          <PhotoLibrarySharp sx={{ fontSize: 28 }} />
+        </Link>
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.youtube.com/mercedesbenztv"
+          href="https://github.com/yhuj79/Benz-Configurator"
         >
-          <LiveTvSharp sx={{ fontSize: 28 }} />
+          <IntegrationInstructionsSharp sx={{ fontSize: 28 }} />
         </a>
-        <Link to="/album">
-          <PhotoLibrarySharp sx={{ fontSize: 28 }} />
-        </Link>
       </div>
       <div
         className={`z-11 ${

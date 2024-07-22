@@ -15,35 +15,38 @@ const calculateTotalPrice = (state, prices) => {
 export const optionsSlice = createSlice({
   name: "options",
   initialState: {
+    name: "",
+    fullName: "",
     styling: "",
     paint: "",
     wheels: "",
     seats: "",
     trim: "",
     steering: "",
-    fullName: "",
-    totalPrice: 0,
     prices: {},
+    totalPrice: 0,
   },
   reducers: {
     setInitialOptions: (state, action) => {
       const {
+        name,
+        fullName,
         styling,
         paint,
         wheels,
         seats,
         trim,
         steering,
-        fullName,
         prices,
       } = action.payload;
+      state.name = name;
+      state.fullName = fullName;
       state.styling = styling[0];
       state.paint = paint[0];
       state.wheels = wheels[0];
       state.seats = seats[0];
       state.trim = trim[0];
       state.steering = steering[0];
-      state.fullName = fullName;
       state.prices = prices;
       state.totalPrice = calculateTotalPrice(state, prices);
     },

@@ -1,12 +1,13 @@
 {
   "amg": {
+    "name": "amg",
+    "fullName": "Mercedes-AMG GT 43 4MATIC+",
     "styling": ["Default", "V8"],
     "paint": ["Black", "PolaWhite"],
     "wheels": ["20alloy", "20multialloy"],
     "seats": ["NapaBlack", "NapaBrown", "NapaRed"],
     "trim": ["BlackPiano", "Carbon"],
     "steering": ["Napa", "Dinamica"],
-    "fullName": "Mercedes-AMG GT 43 4MATIC+",
     "prices": {
       "base": 137600000,
       "styling": { "Default": 0, "V8": 5940000 },
@@ -18,13 +19,14 @@
     }
   },
   "sclass": {
+    "name": "sclass",
+    "fullName": "S 450 d 4MATIC AMG Line",
     "styling": ["Default", "V6", "V8"],
     "paint": ["Sliver", "Black", "Chrome"],
     "wheels": ["18alloy", "20alloy"],
     "seats": ["Brown", "NapaBrown"],
     "trim": ["Wood", "CarbonWhite"],
     "steering": ["Classic", "Sports"],
-    "fullName": "S 450 d 4MATIC AMG Line",
     "prices": {
       "base": 120000000,
       "styling": { "Default": 0, "V6": 3000000, "V8": 5000000 },

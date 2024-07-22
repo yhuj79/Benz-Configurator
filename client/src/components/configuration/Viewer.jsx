@@ -13,7 +13,7 @@ import {
 
 function Viewer({ viewMode }) {
   // Redux Store 상태값 반환 (차량 옵션)
-  const { styling, paint, wheels, seats, trim, steering } = useSelector(
+  const { name, styling, paint, wheels, seats, trim, steering } = useSelector(
     (state) => state.options
   );
 
@@ -57,7 +57,7 @@ function Viewer({ viewMode }) {
           <div className="relative z-20 flex justify-center items-center w-full h-full">
             <img
               alt="exterior"
-              src={exteriorImageUrl(styling, paint, wheels, degree)}
+              src={exteriorImageUrl(name, styling, paint, wheels, degree)}
               ref={imgRef}
               onMouseDown={handleDragStart}
               onMouseMove={handleDragMove}
@@ -75,14 +75,14 @@ function Viewer({ viewMode }) {
         <SwiperSlide>
           <img
             alt="interior-seats"
-            src={interiorImageUrl(seats, trim, steering, "s")}
+            src={interiorImageUrl(name, seats, trim, steering, "s")}
             className="relative z-10 w-full h-full object-cover"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             alt="interior-front"
-            src={interiorImageUrl(seats, trim, steering, "f")}
+            src={interiorImageUrl(name, seats, trim, steering, "f")}
             className="relative z-10 w-full h-full object-cover"
           />
         </SwiperSlide>

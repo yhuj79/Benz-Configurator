@@ -12,6 +12,7 @@ import {
               className="w-full pointer-events-none object-cover scale-125"
               alt="summary-exterior-1"
               src={exteriorImageUrl(
+                options.name,
                 options.styling,
                 options.paint,
                 options.wheels,
@@ -24,6 +25,7 @@ import {
               className="w-full pointer-events-none object-cover scale-125"
               alt="summary-exterior-2"
               src={exteriorImageUrl(
+                options.name,
                 options.styling,
                 options.paint,
                 options.wheels,
@@ -38,6 +40,7 @@ import {
               className="w-full pointer-events-none object-cover"
               alt="summary-interior-s"
               src={interiorImageUrl(
+                options.name,
                 options.seats,
                 options.trim,
                 options.steering,
@@ -50,6 +53,7 @@ import {
               className="w-full pointer-events-none object-cover"
               alt="summary-interior-f"
               src={interiorImageUrl(
+                options.name,
                 options.seats,
                 options.trim,
                 options.steering,
