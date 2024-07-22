@@ -7,7 +7,7 @@
     "wheels": ["FiveTwin", "MultiSpoke"],
     "seats": ["ManufaktBlack", "ManufaktBrown", "ManufaktRed"],
     "trim": ["BlackPiano", "Carbon"],
-    "steering": ["Manufakt", "Dinamica"],
+    "steering": ["Napa", "Dinamica"],
     "prices": {
       "base": 137600000,
       "styling": { "Default": 0, "V8": 5940000 },
