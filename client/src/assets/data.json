@@ -4,7 +4,7 @@
     "fullName": "Mercedes-AMG GT 43 4MATIC+",
     "styling": ["Default", "V8"],
     "paint": ["Black", "PolaWhite"],
-    "wheels": ["FiveTwin", "MuitiSpoke"],
+    "wheels": ["FiveTwin", "MultiSpoke"],
     "seats": ["NapaBlack", "NapaBrown", "NapaRed"],
     "trim": ["BlackPiano", "Carbon"],
     "steering": ["Napa", "Dinamica"],
@@ -12,7 +12,7 @@
       "base": 137600000,
       "styling": { "Default": 0, "V8": 5940000 },
       "paint": { "Black": 0, "PolaWhite": 0 },
-      "wheels": { "FiveTwin": 0, "MuitiSpoke": 1030000 },
+      "wheels": { "FiveTwin": 0, "MultiSpoke": 1030000 },
       "seats": { "NapaBlack": 0, "NapaBrown": 6250000, "NapaRed": 5430000 },
       "trim": { "BlackPiano": 0, "Carbon": 6040000 },
       "steering": { "Napa": 0, "Dinamica": 870000 }
