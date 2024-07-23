@@ -17,14 +17,14 @@ function ModelList() {
       </div>
       <div className="relative md:flex">
         <Model
-          image={require("../../assets/main/model_cla.webp")}
-          name="CLA-Class"
-          link="/"
+          image={require("../../assets/main/model_eqs.webp")}
+          name="EQS"
+          link="/configuration/eqs"
         />
         <Model
-          image={require("../../assets/main/model_c.webp")}
-          name="C-Class"
-          link="/"
+          image={require("../../assets/main/model_g.webp")}
+          name="G-Wagen"
+          link="/configuration/gclass"
         />
       </div>
     </div>

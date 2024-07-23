@@ -45,6 +45,29 @@
       "steering": { "Sports": 0, "WoodLeather": 1270000 }
     }
   },
+  "gclass": {
+    "name": "gclass",
+    "fullName": "G 500 AMG Line",
+    "styling": ["Unify", "Night"],
+    "paint": ["Silver", "PolaWhite", "Obsidian"],
+    "wheels": ["FiveBranch", "TenBranch"],
+    "seats": ["DesignoBlack", "TruffleBrown", "PlatinumWhite"],
+    "trim": ["Wood", "ManufaktPiano", "CarbonFibre"],
+    "steering": ["Default"],
+    "prices": {
+      "base": 254000000,
+      "styling": { "Unify": 0, "Night": 1100000 },
+      "paint": { "Silver": 0, "PolaWhite": 7580000, "Obsidian": 9500000 },
+      "wheels": { "FiveBranch": 0, "TenBranch": 1570000 },
+      "seats": {
+        "DesignoBlack": 0,
+        "TruffleBrown": 1720000,
+        "PlatinumWhite": 2250000
+      },
+      "trim": { "Wood": 0, "ManufaktPiano": 820000, "CarbonFibre": 6300000 },
+      "steering": { "Default": 0 }
+    }
+  },
   "configs": [
     {
       "name": "Styling Package",

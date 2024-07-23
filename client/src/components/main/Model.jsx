@@ -5,8 +5,8 @@ function Model({ image, name, link }) {
     <div className="m-2 md:w-1/2 overflow-hidden group">
       <Link to={link} className="relative overflow-hidden group">
         <img
-          className="md:group-hover:scale-110 opacity-100 md:opacity-70 md:group-hover:opacity-100 w-full h-[140px] md:h-auto md:transform md:transition md:duration-300 object-cover md:ease-in-out"
-          alt=""
+          className="md:group-hover:scale-110 opacity-100 md:opacity-80 md:group-hover:opacity-100 w-full h-[140px] md:h-auto md:transform md:transition md:duration-300 object-cover md:ease-in-out"
+          alt={name}
           src={image}
         />
         <div className="bottom-0 left-0 absolute mb-1 md:mb-4 ml-2 md:ml-5">
