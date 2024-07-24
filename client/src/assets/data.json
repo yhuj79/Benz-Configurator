@@ -9,7 +9,7 @@
     "trim": ["BlackPiano", "Carbon"],
     "steering": ["Napa", "Dinamica"],
     "prices": {
-      "base": 137600000,
+      "base": 155800000,
       "styling": { "Default": 0, "V8": 5940000 },
       "paint": { "Black": 0, "PolaWhite": 0 },
       "wheels": { "FiveTwin": 0, "MultiSpoke": 1030000 },
@@ -65,6 +65,33 @@
         "PlatinumWhite": 2250000
       },
       "trim": { "Wood": 0, "ManufaktPiano": 820000, "CarbonFibre": 6300000 },
+      "steering": { "Default": 0 }
+    }
+  },
+  "eqs": {
+    "name": "eqs",
+    "fullName": "EQS 450 4MATIC SUV",
+    "styling": ["Chrome", "BlackChrome"],
+    "paint": ["PolaWhite", "Sodalite"],
+    "wheels": ["FiveSpoke", "MultiBranch"],
+    "seats": ["BlackGray", "BlackBrown", "NevaBrown"],
+    "trim": ["BassWood", "MagnoliaWood", "CarbonFibre"],
+    "steering": ["Default"],
+    "prices": {
+      "base": 148000000,
+      "styling": { "Chrome": 0, "BlackChrome": 670000 },
+      "paint": { "PolaWhite": 0, "Sodalite": 740000 },
+      "wheels": { "FiveSpoke": 0, "MultiBranch": 3100000 },
+      "seats": {
+        "BlackGray": 0,
+        "BlackBrown": 650000,
+        "NevaBrown": 720000
+      },
+      "trim": {
+        "BassWood": 0,
+        "MagnoliaWood": 1340000,
+        "CarbonFibre": 2250000
+      },
       "steering": { "Default": 0 }
     }
   },
