@@ -2,7 +2,7 @@ import Model from "./Model";
 
 function ModelList() {
   return (
-    <div className="mx-auto py-20 w-5/6">
+    <div className="mx-auto mb-44 py-40 w-5/6">
       <div className="relative md:flex">
         <Model
           image={require("../../assets/main/model_amg.webp")}
