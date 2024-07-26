@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
 import ReactToPrint from "react-to-print";
+import { isMobile } from "react-device-detect";
 
 import {
   ChakraProvider,
@@ -13,6 +14,7 @@ import {
   ModalFooter,
   ModalBody,
   ModalCloseButton,
+  useToast,
 } from "@chakra-ui/react";
 
 import Table from "./Table";
@@ -39,6 +41,18 @@ function Modal({ totalPrice }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const options = useSelector((state) => state.options);
   const printRef = useRef();
+  const toast = useToast();
+
+  // PC가 아닌 환경에서 프린트 버튼 클릭 시 Toast 띄우기
+  const handleMobilePrintClick = () => {
+    toast({
+      title: "Print Unavailable",
+      description: "Printing is only available on desktop devices.",
+      status: "info",
+      duration: 5000,
+      isClosable: true,
+    });
+  };
 
   return (
     <ChakraProvider theme={theme}>
@@ -82,14 +96,23 @@ function Modal({ totalPrice }) {
             >
               Close
             </button>
-            <ReactToPrint
-              trigger={() => (
-                <button className="md:inline-block border-2 hidden bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm mx-2 mb-2 px-4 py-2 border-blue-600 rounded-md font-semibold text-head-line text-sm transition duration-300">
-                  Print
-                </button>
-              )}
-              content={() => printRef.current}
-            />
+            {isMobile ? (
+              <button
+                onClick={handleMobilePrintClick}
+                className="inline-block border-2 bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm mr-0 md:mr-2 mb-2 ml-4 px-4 py-2 border-blue-600 rounded-md font-semibold text-head-line text-sm transition duration-300"
+              >
+                Print
+              </button>
+            ) : (
+              <ReactToPrint
+                trigger={() => (
+                  <button className="inline-block border-2 bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm mr-0 md:mr-2 mb-2 ml-4 px-4 py-2 border-blue-600 rounded-md font-semibold text-head-line text-sm transition duration-300">
+                    Print
+                  </button>
+                )}
+                content={() => printRef.current}
+              />
+            )}
           </ModalFooter>
         </ModalContent>
       </ChakraModal>

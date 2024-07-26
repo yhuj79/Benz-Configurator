@@ -53,7 +53,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               {choices.map((choice) => (
                 <div
                   key={choice}
-                  className={`text-center w-[120px] h-[120px] transform transition duration-300 border-2 m-1 ${
+                  className={`text-center w-[106px] h-[106px] transform transition duration-300 border-2 m-1 ${
                     selected === choice ? "border-head-line" : "border-md-gray"
                   } bg-black-gray rounded-lg`}
                   onClick={() => dispatch(action(choice))}
@@ -61,7 +61,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                   <img
                     alt={choice}
                     src={optionImageUrl(choice)}
-                    className="rounded-t-md w-[120px] h-[96px]"
+                    className="rounded-t-md w-[102px] h-[82px] object-cover"
                   />
                   <p className="h-[24px] text-desc text-xs leading-5">{choice}</p>
                   <p className="h-[24px] text-desc text-xs">
@@ -82,7 +82,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                   <img
                     alt={choice}
                     src={optionImageUrl(choice)}
-                    className="rounded-l-md w-[50px] h-[40px]"
+                    className="rounded-l-md w-[50px] h-[40px] object-cover"
                   />
                   <div className="flex justify-between px-2 w-full">
                     <p className="text-desc text-sm leading-[40px]">{choice}</p>

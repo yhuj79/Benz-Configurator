@@ -131,7 +131,7 @@
     {
       "name": "Trim",
       "icon": "trim",
-      "desc": "Details which make the difference",
+      "desc": "Details make the difference",
       "action": "setTrim",
       "choices": "trim",
       "viewMode": "interior-front"

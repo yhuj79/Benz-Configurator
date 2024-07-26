@@ -20,8 +20,15 @@ function Viewer({ viewMode }) {
 
   // 차량 Exterior 각도 상태 관리
   const [degree, setDegree] = useState(1);
-  const { imgRef, handleDragStart, handleDragEnd, handleDragMove } =
-    useExteriorHandler(degree, setDegree);
+  const {
+    imgRef,
+    handleDragStart,
+    handleDragEnd,
+    handleDragMove,
+    handleTouchStart,
+    handleTouchMove,
+    handleTouchEnd,
+  } = useExteriorHandler(degree, setDegree);
 
   const swiperRef = useRef(null);
 
@@ -55,7 +62,7 @@ function Viewer({ viewMode }) {
             src="https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/viewer/background.webp"
             className="top-0 brightness-95 left-0 z-10 absolute w-full h-full object-cover"
           />
-          <div className="relative z-20 flex justify-center items-center w-full h-full">
+          <div className="relative z-20 flex justify-center items-center w-full h-full cursor-ew-resize">
             <img
               alt="exterior"
               src={exteriorImageUrl(name, styling, paint, wheels, degree)}
@@ -64,6 +71,9 @@ function Viewer({ viewMode }) {
               onMouseMove={handleDragMove}
               onMouseUp={handleDragEnd}
               onMouseLeave={handleDragEnd}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
               className="relative z-11 pl-3 sm:pl-5 md:pl-7 lg:pl-9 2xl:pl-13 xl:pl-11"
             />
             <img

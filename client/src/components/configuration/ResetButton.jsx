@@ -49,7 +49,7 @@ function ResetButton({ data }) {
           Reset All Options
         </button>
       </div>
-      <ChakraModal isOpen={isOpen} onClose={onClose} size={"sm"}>
+      <ChakraModal isOpen={isOpen} onClose={onClose} size={"xs"}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Reset All Options</ModalHeader>
@@ -60,13 +60,13 @@ function ResetButton({ data }) {
           <ModalFooter>
             <button
               onClick={onClose}
-              className="inline-block border-2 border-gray-500 bg-gray-500 md:hover:bg-gray-600 shadow-lg text-shadow-sm mx-0 mb-2 px-4 py-2 rounded-md font-semibold text-head-line text-sm transition duration-300"
+              className="inline-block border-2 border-gray-500 bg-gray-500 md:hover:bg-gray-600 shadow-lg text-shadow-sm mx-0 mt-1 mb-1 px-4 py-2 rounded-md font-semibold text-head-line text-sm transition duration-300"
             >
               Close
             </button>
             <button
               onClick={() => handleReset(data)}
-              className="inline-block border-2 bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm mx-2 mb-2 px-4 py-2 border-blue-600 rounded-md font-semibold text-head-line text-sm transition duration-300"
+              className="inline-block border-2 bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm mt-1 mb-1 ml-4 px-4 py-2 border-blue-600 rounded-md font-semibold text-head-line text-sm transition duration-300"
             >
               Reset
             </button>

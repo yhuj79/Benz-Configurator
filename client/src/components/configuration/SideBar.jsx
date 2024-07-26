@@ -33,7 +33,7 @@ function SideBar({ data, configs, setViewMode }) {
   };
 
   return (
-    <div className="flex flex-col flex-2 bg-dark-gray pb-4 border-l-0 border-l-md-gray md:border-l-2 min-w-full lg:min-w-[426px] max-w-full h-full overflow-y-auto scrollbar-hide">
+    <div className="flex flex-col flex-2 bg-dark-gray pb-4 border-l-0 border-l-md-gray md:border-l-2 min-w-full lg:min-w-[384px] max-w-full h-full overflow-y-auto scrollbar-hide">
       {configs.map((m) => {
         const action = actionsMap[m.action];
         const choices = data[m.choices];
