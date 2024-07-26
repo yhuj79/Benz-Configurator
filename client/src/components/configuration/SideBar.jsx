@@ -22,6 +22,7 @@ const actionsMap = {
   setSteering,
 };
 
+// Configuration Page 옵션 고르는 SideBar 컴포넌트
 function SideBar({ data, configs, setViewMode }) {
   const dispatch = useDispatch();
   const [openOption, setOpenOption] = useState(null);

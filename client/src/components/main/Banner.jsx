@@ -1,3 +1,6 @@
+import React from "react";
+
+// Main Page 인트로 영상이 있는 Banner 컴포넌트
 function Banner({ scrollToModelList }) {
   return (
     <div className="relative my-[-5px] h-screen">

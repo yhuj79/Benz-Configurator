@@ -14,8 +14,10 @@ import {
 
 import dataAll from "../../assets/data.json";
 
+// Configuration Page 차량 요약 내역 Modal 옵션 표 컴포넌트
 function Table({ options }) {
   const configs = dataAll.configs;
+  // 768px 미만 화면 구분
   const isMobile = useBreakpointValue({ base: true, md: false });
 
   const items = configs.map((m) => ({

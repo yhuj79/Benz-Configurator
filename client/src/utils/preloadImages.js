@@ -4,12 +4,12 @@ import {
   optionImageUrl,
 } from "./generateImageUrl";
 
-// Image Pre Loading
+// 차량 이미지 Pre Loading 처리
 export const preloadImages = (data) => {
   const images = [];
   const degrees = Array.from({ length: 36 }, (_, i) => i + 1);
 
-  // 차량 이미지 - Styling Package, Paint, Wheels 옵션 순회
+  // Styling Package, Paint, Wheels 옵션 순회
   data.styling.forEach((styling) => {
     data.paint.forEach((paint) => {
       data.wheels.forEach((wheels) => {
@@ -22,7 +22,7 @@ export const preloadImages = (data) => {
     });
   });
 
-  // 차량 이미지 - Seats, Trim, Steering 옵션 순회
+  // Seats, Trim, Steering 옵션 순회
   data.seats.forEach((seats) => {
     data.trim.forEach((trim) => {
       data.steering.forEach((steering) => {

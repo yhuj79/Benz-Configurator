@@ -11,6 +11,7 @@ import {
   interiorImageUrl,
 } from "../../utils/generateImageUrl";
 
+// Configuration Page 차량 Viewer 컴포넌트
 function Viewer({ viewMode }) {
   // Redux Store 상태값 반환 (차량 옵션)
   const { name, styling, paint, wheels, seats, trim, steering } = useSelector(

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Redux 차량 옵션 관리
 const calculateTotalPrice = (state, prices) => {
   return (
     prices.base +

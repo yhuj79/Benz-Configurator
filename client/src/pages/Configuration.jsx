@@ -13,6 +13,7 @@ import { preloadImages } from "../utils/preloadImages";
 
 import dataAll from "../assets/data.json";
 
+// 차량 Configuration 페이지
 function Configuration() {
   const { name } = useParams();
   const data = dataAll[name];

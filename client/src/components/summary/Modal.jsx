@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
 import ReactToPrint from "react-to-print";
+
 import {
   ChakraProvider,
   useDisclosure,
@@ -19,6 +20,7 @@ import Preview from "./Preview";
 
 import Logo from "../../assets/main/logo.webp";
 
+// Chakra UI Modal 설정
 const theme = extendTheme({
   components: {
     Modal: {
@@ -32,6 +34,7 @@ const theme = extendTheme({
   },
 });
 
+// Configuration Page 차량 요약 내역 Modal 컴포넌트
 function Modal({ totalPrice }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const options = useSelector((state) => state.options);

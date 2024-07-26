@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../../assets/main/logo.webp";
 
+// Footer 컴포넌트
 function Footer() {
   return (
     <footer className="bg-gray-700 py-12 text-center text-desc">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// Main Page 차량 카드 컴포넌트
 function Model({ image, name, link }) {
   return (
     <div className="m-2 md:w-1/2 overflow-hidden group">

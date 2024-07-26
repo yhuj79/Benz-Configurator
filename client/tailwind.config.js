@@ -1,3 +1,4 @@
+// Tailwind Css 커스텀 설정
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
@@ -28,12 +29,32 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateX(15%)" },
           "100%": { opacity: 1, transform: "translateX(0)" },
         },
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideRight: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        fadeOut: {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
       },
       animation: {
         appearZoom: "appearZoom 1s ease-in-out",
         appearDown: "appearDown 0.7s ease-in-out forwards",
         appearNormal: "appearNormal 1s ease-in-out forwards",
         appearLeft: "appearLeft 0.3s ease-in-out forwards",
+        slideInLeft: "slideInLeft 0.3s ease-out forwards",
+        slideRight: "slideRight 0.3s ease-out forwards",
+        fadeIn: "fadeIn 0.3s ease-in-out",
+        fadeOut: "fadeOut 0.3s ease-in-out",
       },
     },
   },

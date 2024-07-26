@@ -4,6 +4,7 @@ import AnimatedPage from "../components/common/AnimatedPage";
 import Banner from "../components/main/Banner";
 import ModelList from "../components/main/ModelList";
 
+// Main 페이지
 function Main() {
   const modelListRef = useRef(null);
 

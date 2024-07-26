@@ -3,6 +3,7 @@ import {
     interiorImageUrl,
   } from "../../utils/generateImageUrl";
   
+  // Configuration Page 차량 요약 내역 Modal 이미지 Preview 컴포넌트
   function Preview({ options }) {
     return (
       <div>

@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 
 import Modal from "../summary/Modal";
 
+// Configuration Page 차량 요약 내역 Summary 컴포넌트
 function Summary() {
   const fullName = useSelector((state) => state.options.fullName);
   const totalPrice = useSelector((state) => state.options.totalPrice);

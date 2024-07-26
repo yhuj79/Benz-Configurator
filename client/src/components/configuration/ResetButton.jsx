@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+
 import {
   ChakraProvider,
   useDisclosure,
@@ -14,6 +15,7 @@ import {
 
 import { setInitialOptions } from "../../features/optionsSlice";
 
+// Chakra UI Modal 설정
 const theme = extendTheme({
   components: {
     Modal: {
@@ -27,18 +29,19 @@ const theme = extendTheme({
   },
 });
 
+// Configuration Page SideBar 하단 리셋 컴포넌트
 function ResetButton({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const dispatch = useDispatch();
 
-  function handleReset(data) {
+  const handleReset = (data) => {
     dispatch(setInitialOptions(data));
     onClose();
-  }
+  };
 
   return (
     <ChakraProvider theme={theme}>
-      <div className="mx-5 mt-8 mb-6">
+      <div className="mx-5 mt-10 mb-6">
         <button
           onClick={onOpen}
           className="inline-block border-2 bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm px-4 py-2 border-blue-600 rounded-md w-full font-semibold text-head-line text-sm transition duration-300"

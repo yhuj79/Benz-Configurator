@@ -1,5 +1,6 @@
 import Model from "./Model";
 
+// Main Page 차량 카드 리스트 컴포넌트
 function ModelList() {
   return (
     <div className="mx-auto mb-44 py-40 w-5/6">
