@@ -1,10 +1,23 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Main Page 차량 카드 컴포넌트
-function Model({ image, name, link }) {
+function Model({ image, name, link, type }) {
+  const navigate = useNavigate();
+
+  const handleNavigate = (link) => {
+    if (type === "reload") {
+      window.location.assign(`http://192.168.50.138:3000${link}`);
+    } else {
+      navigate(link);
+    }
+  };
+
   return (
     <div className="m-2 md:w-1/2 overflow-hidden group">
-      <Link to={link} className="relative overflow-hidden group">
+      <div
+        onClick={() => handleNavigate(link)}
+        className="relative cursor-pointer overflow-hidden group"
+      >
         <img
           className="md:group-hover:scale-110 opacity-100 md:opacity-80 md:group-hover:opacity-100 w-full h-[140px] md:h-auto md:transform md:transition md:duration-300 object-cover md:ease-in-out"
           alt={name}
@@ -15,7 +28,7 @@ function Model({ image, name, link }) {
             {name}
           </p>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }

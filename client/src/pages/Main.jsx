@@ -20,7 +20,7 @@ function Main() {
     <AnimatedPage>
       <Banner scrollToModelList={scrollToModelList} />
       <div ref={modelListRef}>
-        <ModelList />
+        <ModelList type={"navigate"} mb={44} py={40} nOverSix={5} />
       </div>
     </AnimatedPage>
   );
