@@ -1,3 +1,5 @@
+import { isMobile } from "react-device-detect";
+
 import {
   ChakraProvider,
   useDisclosure,
@@ -12,10 +14,9 @@ import {
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
-
 import { SyncAltSharp } from "@mui/icons-material";
 
-import ModelList from "../main/ModelList";
+import ModelList from "../common/ModelList";
 
 // Chakra UI Modal 설정
 const theme = extendTheme({
@@ -44,7 +45,7 @@ function Change() {
       />
       <ChakraModal isOpen={isOpen} onClose={onClose} size={"xl"}>
         <ModalOverlay />
-        <ModalContent maxW="65%">
+        <ModalContent maxW={isMobile ? "90%" : "65%"}>
           <ModalHeader>Change Model</ModalHeader>
           <ModalCloseButton />
           <ModalBody className="mb-4">
@@ -56,7 +57,7 @@ function Change() {
                 </AlertDescription>
               </Alert>
             </div>
-            <ModelList type={"reload"} mb={0} py={0} nOverSix={6} />
+            <ModelList type={"change"} />
           </ModalBody>
         </ModalContent>
       </ChakraModal>

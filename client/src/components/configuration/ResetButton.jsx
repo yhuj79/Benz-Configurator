@@ -41,7 +41,7 @@ function ResetButton({ data }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <div className="mx-5 mt-10 mb-6">
+      <div className="mx-5 mt-10 mb-4">
         <button
           onClick={onOpen}
           className="inline-block border-2 bg-blue-600 md:hover:bg-blue-800 shadow-lg text-shadow-sm px-4 py-2 border-blue-600 rounded-md w-full font-semibold text-head-line text-sm transition duration-300"

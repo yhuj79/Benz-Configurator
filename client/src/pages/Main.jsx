@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import AnimatedPage from "../components/common/AnimatedPage";
 import Banner from "../components/main/Banner";
-import ModelList from "../components/main/ModelList";
+import ModelList from "../components/common/ModelList";
 
 // Main 페이지
 function Main() {
@@ -20,7 +20,7 @@ function Main() {
     <AnimatedPage>
       <Banner scrollToModelList={scrollToModelList} />
       <div ref={modelListRef}>
-        <ModelList type={"navigate"} mb={44} py={40} nOverSix={5} />
+        <ModelList type={"main"} />
       </div>
     </AnimatedPage>
   );

@@ -1,9 +1,9 @@
 import Model from "./Model";
 
-// Main Page 차량 카드 리스트 컴포넌트
-function ModelList({ type, mb, py, nOverSix }) {
+// 차량 카드 리스트 컴포넌트
+function ModelList({ type }) {
   return (
-    <div className={`mx-auto mb-${mb} py-${py} w-${nOverSix}/6`}>
+    <div className={type === `main` ? `mx-auto mb-44 py-40 w-5/6` : `mx-auto`}>
       <div className="relative md:flex">
         <Model
           image={require("../../assets/main/model_amg.webp")}

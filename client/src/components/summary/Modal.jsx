@@ -64,7 +64,7 @@ function Modal({ totalPrice }) {
       </button>
       <ChakraModal isOpen={isOpen} onClose={onClose} size={"xl"}>
         <ModalOverlay />
-        <ModalContent maxW="85%">
+        <ModalContent maxW={isMobile ? "90%" : "65%"}>
           <ModalHeader>Your Configuration</ModalHeader>
           <ModalCloseButton />
           <ModalBody ref={printRef}>
@@ -89,7 +89,7 @@ function Modal({ totalPrice }) {
             </div>
             <Preview options={options} />
           </ModalBody>
-          <ModalFooter>
+          <ModalFooter className="mt-[-8px]">
             <button
               onClick={onClose}
               className="inline-block border-2 border-gray-500 bg-gray-500 md:hover:bg-gray-600 shadow-lg text-shadow-sm mx-0 mb-2 px-4 py-2 rounded-md font-semibold text-head-line text-sm transition duration-300"
