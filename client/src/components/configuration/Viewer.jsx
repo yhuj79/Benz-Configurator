@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import { EffectFade } from "swiper/modules";
 
+import Caution from "./Caution";
+
 import useExteriorHandler from "../../hooks/useExteriorHandler";
 import {
   exteriorImageUrl,
@@ -47,6 +49,7 @@ function Viewer({ viewMode }) {
 
   return (
     <div className="sm:relative top-0 sm:top-auto z-20 sticky border-md-gray border-b-2 sm:border-b-0 w-full h-full overflow-hidden">
+      <Caution />
       <Swiper
         ref={swiperRef}
         modules={[EffectFade]}

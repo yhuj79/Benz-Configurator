@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 
-import OptionSelector from "./OptionSelector";
-import ResetButton from "./ResetButton";
+import Selector from "./Selector";
+import Reset from "./Reset";
 
 import {
   setStyling,
@@ -27,7 +27,7 @@ function SideBar({ data, configs, setViewMode }) {
   const dispatch = useDispatch();
   const [openOption, setOpenOption] = useState(null);
 
-  // OptionSelector 선택 시 열려 있던 OptionSelector 닫기
+  // 옵션 선택 시 열려 있던 Selector 닫기
   const handleOptionClick = (optionName) => {
     setOpenOption(openOption === optionName ? null : optionName);
   };
@@ -39,7 +39,7 @@ function SideBar({ data, configs, setViewMode }) {
         const choices = data[m.choices];
 
         return (
-          <OptionSelector
+          <Selector
             key={m.name}
             option={{ ...m, action, choices }}
             isOpen={openOption === m.name}
@@ -52,7 +52,7 @@ function SideBar({ data, configs, setViewMode }) {
         );
       })}
       <div className="mt-auto">
-        <ResetButton data={data} />
+        <Reset data={data} />
       </div>
     </div>
   );

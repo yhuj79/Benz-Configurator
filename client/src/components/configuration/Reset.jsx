@@ -30,7 +30,7 @@ const theme = extendTheme({
 });
 
 // Configuration Page SideBar 하단 리셋 컴포넌트
-function ResetButton({ data }) {
+function Reset({ data }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const dispatch = useDispatch();
 
@@ -77,4 +77,4 @@ function ResetButton({ data }) {
   );
 }
 
-export default ResetButton;
+export default Reset;
