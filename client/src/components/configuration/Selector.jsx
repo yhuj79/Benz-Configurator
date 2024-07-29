@@ -5,7 +5,7 @@ import { ArrowForwardIosSharp, ArrowBackIosSharp } from "@mui/icons-material";
 import { optionImageUrl } from "../../utils/generateImageUrl";
 
 // Configuration Page SideBar 옵션 버튼 컴포넌트
-function OptionSelector({ option, isOpen, onClick, dispatch }) {
+function Selector({ option, isOpen, onClick, dispatch }) {
   const { name, icon, desc, choices, action } = option;
   const selected = useSelector((state) => state.options[icon]);
   const prices = useSelector((state) => state.options.prices[icon]);
@@ -34,7 +34,9 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               {isOpen && (
                 <p className="mt-2 text-desc text-xs md:text-sm">
                   selected:{" "}
-                  <span className="font-bold text-head-line text-sm">{selected}</span>
+                  <span className="font-bold text-head-line text-sm">
+                    {selected}
+                  </span>
                 </p>
               )}
             </div>
@@ -53,7 +55,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               {choices.map((choice) => (
                 <div
                   key={choice}
-                  className={`text-center w-[106px] h-[106px] transform transition duration-300 border-2 m-1 ${
+                  className={`text-center w-[106px] h-[106px] transform transition duration-300 border-2 m-1 cursor-pointer ${
                     selected === choice ? "border-head-line" : "border-md-gray"
                   } bg-black-gray rounded-lg`}
                   onClick={() => dispatch(action(choice))}
@@ -63,9 +65,12 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                     src={optionImageUrl(choice)}
                     className="rounded-t-md w-[102px] h-[82px] object-cover"
                   />
-                  <p className="h-[24px] text-desc text-xs leading-5">{choice}</p>
+                  <p className="h-[24px] text-desc text-xs leading-5">
+                    {choice}
+                  </p>
                   <p className="h-[24px] text-desc text-xs">
-                    {prices[choice] > 0 && `+ ${prices[choice].toLocaleString()} ₩`}
+                    {prices[choice] > 0 &&
+                      `+ ${prices[choice].toLocaleString()} ₩`}
                   </p>
                 </div>
               ))}
@@ -74,7 +79,7 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
               {choices.map((choice) => (
                 <div
                   key={choice}
-                  className={`flex text-center w-full transform transition duration-300 border-2 mb-2 ${
+                  className={`flex cursor-pointer text-center w-full transform transition duration-300 border-2 mb-2 ${
                     selected === choice ? "border-head-line" : "border-md-gray"
                   } bg-black-gray rounded-lg`}
                   onClick={() => dispatch(action(choice))}
@@ -87,7 +92,8 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
                   <div className="flex justify-between px-2 w-full">
                     <p className="text-desc text-sm leading-[40px]">{choice}</p>
                     <p className="text-desc text-sm leading-[40px]">
-                      {prices[choice] > 0 && `+ ${prices[choice].toLocaleString()} ₩`}
+                      {prices[choice] > 0 &&
+                        `+ ${prices[choice].toLocaleString()} ₩`}
                     </p>
                   </div>
                 </div>
@@ -99,4 +105,4 @@ function OptionSelector({ option, isOpen, onClick, dispatch }) {
     );
 }
 
-export default OptionSelector;
+export default Selector;
