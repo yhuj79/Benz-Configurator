@@ -53,7 +53,9 @@ function Change() {
               <Alert status="warning" variant="solid">
                 <AlertIcon />
                 <AlertDescription>
-                  Any changes you have made so far will be lost.
+                  <span className="text-sm md:text-base">
+                    Any changes you have made so far will be lost.
+                  </span>
                 </AlertDescription>
               </Alert>
             </div>

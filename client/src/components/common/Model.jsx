@@ -33,7 +33,7 @@ function Model({ image, name, link, type }) {
           className="relative cursor-pointer overflow-hidden group"
         >
           <img
-            className={`md:group-hover:scale-110 w-full md:h-auto md:transform md:transition md:duration-300 object-cover md:opacity-80 md:group-hover:opacity-100 duration-300 ease-in-out`}
+            className={`md:group-hover:scale-110 w-full h-[140px] md:h-auto md:transform md:transition md:duration-300 object-cover md:opacity-80 md:group-hover:opacity-100 duration-300 ease-in-out`}
             alt={name}
             src={image}
           />
