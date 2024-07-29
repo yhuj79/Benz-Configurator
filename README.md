@@ -18,19 +18,6 @@
 
 ## About The Project
 
-<div>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/1.png width=400>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/2.png width=400>
-</div>
-<div>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/3.png width=400>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/4.png width=400>
-</div>
-<div>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/5.png width=400>
-    <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/6.png width=400>
-</div>
-
 ### :alarm_clock: 제작 기간
 
 - 2024.07.03 ~ 2024.07.29
@@ -47,35 +34,51 @@
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/8.png width=400>
 </div>
 
-1. 메인 화면 차량 리스트에 [Loading Skeleton](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/common/Model.jsx) 적용
-2. 백그라운드 인트로 영상 [Banner](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/main/Banner.jsx)
-3. 페이지 전환 [Blur Animation](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/common/AnimatedPage.jsx)
+<br>
+
+- 메인 화면 차량 리스트에 [Loading Skeleton](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/common/Model.jsx) 적용
+- 백그라운드 인트로 영상 [Banner](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/main/Banner.jsx)
+- 페이지 전환 [Blur Animation](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/common/AnimatedPage.jsx)
+
+<br>
 
 <div>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/1.png width=400>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/2.png width=400>
 </div>
 
-4. [Drag Event](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/hooks/useExteriorHandler.js)를 통해 [360° 뷰어 기능](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/configuration/Viewer.jsx) 구현
-5. 부드러운 이미지 전환을 위한 [Image Pre Loading](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/utils/preloadImages.js) 처리 ([원리 관련 내용](https://yhuj79.github.io/React/240608))
-6. [Redux](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/features/optionsSlice.js)로 차량, 옵션, 가격 정보 제어 ([SideBar](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/configuration/SideBar.jsx)에서 옵션 설정)
+<br>
+
+- [Drag Event](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/hooks/useExteriorHandler.js)를 통해 [360° 뷰어 기능](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/configuration/Viewer.jsx) 구현
+- 부드러운 이미지 전환을 위한 [Image Pre Loading](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/utils/preloadImages.js) 처리 ([원리 관련 내용](https://yhuj79.github.io/React/240608))
+- [Redux](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/features/optionsSlice.js)로 차량, 옵션, 가격 정보 제어 ([SideBar](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/configuration/SideBar.jsx)에서 옵션 설정)
+
+<br>
 
 <div>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/3.png width=400>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/4.png width=400>
 </div>
 
-7. 옵션 카테고리에 따라 차량 실내 모습 전환
-8. [Reset](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/configuration/Reset.jsx) 버튼으로 옵션 기본값으로 초기화
+<br>
+
+- 옵션 카테고리에 따라 차량 실내 모습 전환
+- [Reset](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/configuration/Reset.jsx) 버튼으로 옵션 기본값으로 초기화
+
+<br>
 
 <div>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/5.png width=400>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/6.png width=400>
 </div>
 
-9. 차량 전환 [Modal](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/summary/Change.jsx) (Chakra UI 적용)
-10. 구성한 차량 요약 내역 확인 [Modal](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/summary/Modal.jsx)
-11. 요약 내역 인쇄 기능 (react-to-print 라이브러리 사용)
+<br>
+
+- 차량 전환 [Modal](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/summary/Change.jsx) (Chakra UI 적용)
+- 구성한 차량 요약 내역 확인 [Modal](https://github.com/yhuj79/Benz-Configurator/blob/main/client/src/components/summary/Modal.jsx)
+- 요약 내역 인쇄 기능 (react-to-print 라이브러리 사용)
+
+<br>
 
 <div>
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/9.png width=200>
@@ -83,7 +86,11 @@
     <img align=top src=https://raw.githubusercontent.com/yhuj79/Benz-Configurator/main/client/src/assets/readme/11.png width=200>
 </div>
 
-12. 반응형 디자인 적용
+<br>
+
+- 반응형 디자인 적용
+
+<br>
 
 ### :open_file_folder: Package
 
