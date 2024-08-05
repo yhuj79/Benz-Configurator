@@ -31,7 +31,6 @@ function Configuration() {
       dispatch(setInitialOptions(data));
       preloadImages(data).then(() => {
         setIsLoaded(true);
-        console.log("setIsLoaded");
       });
     }
   }, [name, dispatch, data]);

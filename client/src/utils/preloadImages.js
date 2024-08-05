@@ -53,43 +53,15 @@ export const preloadImages = (data) => {
   addOptionImages(data.trim);
   addOptionImages(data.steering);
 
-  // // 비동기 작업 처리
-  // const promises = images.map((src) => {
-  //   return new Promise((resolve, reject) => {
-  //     const img = new Image();
-  //     img.src = src;
-  //     img.onload = resolve;
-  //     img.onerror = reject;
-  //   });
-  // });
-
-  // TEST
+  // 비동기 작업 처리
   const promises = images.map((src) => {
     return new Promise((resolve, reject) => {
       const img = new Image();
       img.src = src;
-
-      img.onload = () => {
-        console.log(`Image loaded successfully: ${src.slice(82)}`);
-        resolve();
-      };
-
-      img.onerror = (error) => {
-        console.error(`Image failed to load: ${src.slice(82)}`, error);
-        reject(error);
-      };
-
-      console.log(`Attempting to load image: ${src.slice(82)}`);
+      img.onload = resolve;
+      img.onerror = reject;
     });
   });
-
-  Promise.all(promises)
-    .then(() => {
-      console.log("All images loaded successfully.");
-    })
-    .catch((error) => {
-      console.error("One or more images failed to load.", error);
-    });
 
   // Promise.all을 통해 모든 작업이 완료될 때까지 대기
   return Promise.all(promises);
