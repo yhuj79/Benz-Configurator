@@ -104,7 +104,7 @@
  ┃ ┃ ┣ 📂amg
  ┃ ┃ ┣ 📂eqs
  ┃ ┃ ┣ 📂gclass
- ┃ ┃ ┣ 📂sclass
+ ┃ ┃ ┗ 📂sclass
  ┃ ┗ 📜data.json
  ┣ 📂components
  ┃ ┣ 📂common
@@ -123,13 +123,12 @@
  ┃ ┃ ┗ 📜Viewer.jsx
  ┃ ┣ 📂main
  ┃ ┃ ┗ 📜Banner.jsx
- ┃ ┣ 📂summary
- ┃ ┃ ┣ 📜Change.jsx
- ┃ ┃ ┣ 📜Modal.jsx
- ┃ ┃ ┣ 📜Preview.jsx
- ┃ ┃ ┣ 📜Summary.jsx
- ┃ ┃ ┗ 📜Table.jsx
- ┃ ┗ 📜.DS_Store
+ ┃ ┗ 📂summary
+ ┃   ┣ 📜Change.jsx
+ ┃   ┣ 📜Modal.jsx
+ ┃   ┣ 📜Preview.jsx
+ ┃   ┣ 📜Summary.jsx
+ ┃   ┗ 📜Table.jsx
  ┣ 📂features
  ┃ ┗ 📜optionsSlice.js
  ┣ 📂hooks
@@ -145,7 +144,7 @@
  ┃ ┣ 📜generateImageUrl.js
  ┃ ┣ 📜preloadImages.js
  ┃ ┗ 📜scrollControl.js
- ┣ 📜App.jsx
+ ┗ 📜App.jsx
 ```
 
 ### :open_file_folder: Package
