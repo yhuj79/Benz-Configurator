@@ -9,7 +9,7 @@ import Viewer from "../components/configuration/Viewer";
 import SideBar from "../components/configuration/SideBar";
 
 import { setInitialOptions } from "../features/optionsSlice";
-import { preloadImages } from "../utils/preloadImages";
+import { preloadInitialize, preloadBackground } from "../utils/preloadImages";
 
 import dataAll from "../assets/data.json";
 
@@ -29,8 +29,11 @@ function Configuration() {
   useEffect(() => {
     if (data) {
       dispatch(setInitialOptions(data));
-      preloadImages(data).then(() => {
+      // 첫 번째 기본 옵션 이미지만 Preload
+      preloadInitialize(data).then(() => {
         setIsLoaded(true);
+        // 전체 옵션 이미지를 백그라운드에서 Preload
+        preloadBackground(data);
       });
     }
   }, [name, dispatch, data]);
