@@ -18,7 +18,7 @@ import {
 } from "@chakra-ui/react";
 
 import Table from "./Table";
-import Preview from "./Preview";
+import PreviewList from "./PreviewList";
 
 import Logo from "../../assets/main/logo.webp";
 
@@ -87,7 +87,7 @@ function Modal({ totalPrice }) {
                 {totalPrice.toLocaleString()} KRW
               </p>
             </div>
-            <Preview options={options} />
+            <PreviewList options={options} />
           </ModalBody>
           <ModalFooter className="mt-[-8px]">
             <button
